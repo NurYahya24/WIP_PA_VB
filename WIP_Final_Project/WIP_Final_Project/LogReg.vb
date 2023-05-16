@@ -13,7 +13,9 @@ Public Class LogReg
                 Karyawan_Main.Id = RD.GetValue(0)
                 Karyawan_Main.Show()
             ElseIf RD.GetString(1) = "USER" Then
-                MessageBox.Show("USER FRAME SOON")
+                Me.Dispose()
+                Pelanggan_Main.Id = RD.GetValue(0)
+                Pelanggan_Main.Show()
             ElseIf RD.GetString(1) = "OWNER" Then
                 MessageBox.Show("OWNER FRAME SOON")
             End If

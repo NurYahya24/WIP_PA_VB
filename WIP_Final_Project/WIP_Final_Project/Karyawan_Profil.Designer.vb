@@ -23,7 +23,6 @@ Partial Class Karyawan_Profil
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Karyawan_Profil))
-        Me.pbProfilePic = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.lbShift = New System.Windows.Forms.Label()
@@ -45,21 +44,10 @@ Partial Class Karyawan_Profil
         Me.Button1 = New System.Windows.Forms.Button()
         Me.BukaFile = New System.Windows.Forms.OpenFileDialog()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        CType(Me.pbProfilePic, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pbProfilePic = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
+        CType(Me.pbProfilePic, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'pbProfilePic
-        '
-        Me.pbProfilePic.BackColor = System.Drawing.Color.Transparent
-        Me.pbProfilePic.BackgroundImage = CType(resources.GetObject("pbProfilePic.BackgroundImage"), System.Drawing.Image)
-        Me.pbProfilePic.ErrorImage = Nothing
-        Me.pbProfilePic.Location = New System.Drawing.Point(250, 26)
-        Me.pbProfilePic.Name = "pbProfilePic"
-        Me.pbProfilePic.Size = New System.Drawing.Size(100, 100)
-        Me.pbProfilePic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.pbProfilePic.TabIndex = 1
-        Me.pbProfilePic.TabStop = False
         '
         'Panel1
         '
@@ -270,6 +258,18 @@ Partial Class Karyawan_Profil
         Me.Panel2.Size = New System.Drawing.Size(105, 105)
         Me.Panel2.TabIndex = 3
         '
+        'pbProfilePic
+        '
+        Me.pbProfilePic.BackColor = System.Drawing.Color.Transparent
+        Me.pbProfilePic.BackgroundImage = CType(resources.GetObject("pbProfilePic.BackgroundImage"), System.Drawing.Image)
+        Me.pbProfilePic.ErrorImage = Nothing
+        Me.pbProfilePic.Location = New System.Drawing.Point(250, 25)
+        Me.pbProfilePic.Name = "pbProfilePic"
+        Me.pbProfilePic.Size = New System.Drawing.Size(100, 100)
+        Me.pbProfilePic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbProfilePic.TabIndex = 1
+        Me.pbProfilePic.TabStop = False
+        '
         'Karyawan_Profil
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -281,14 +281,12 @@ Partial Class Karyawan_Profil
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Karyawan_Profil"
         Me.Text = "Karyawan_Profil"
-        CType(Me.pbProfilePic, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.pbProfilePic, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
-
-    Friend WithEvents pbProfilePic As PictureBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Button1 As Button
     Friend WithEvents BukaFile As OpenFileDialog
@@ -310,4 +308,5 @@ Partial Class Karyawan_Profil
     Friend WithEvents txtAlamat As TextBox
     Friend WithEvents txtMail As TextBox
     Friend WithEvents Label2 As Label
+    Friend WithEvents pbProfilePic As PictureBox
 End Class

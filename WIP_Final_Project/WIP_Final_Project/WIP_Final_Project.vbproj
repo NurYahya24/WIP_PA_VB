@@ -95,6 +95,18 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Module1.vb" />
+    <Compile Include="Pelanggan_Main.Designer.vb">
+      <DependentUpon>Pelanggan_Main.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pelanggan_Main.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pelanggan_Profil.Designer.vb">
+      <DependentUpon>Pelanggan_Profil.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pelanggan_Profil.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Splash_screen.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +145,12 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pelanggan_Main.resx">
+      <DependentUpon>Pelanggan_Main.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pelanggan_Profil.resx">
+      <DependentUpon>Pelanggan_Profil.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Splash_screen.resx">
       <DependentUpon>Splash_screen.vb</DependentUpon>
