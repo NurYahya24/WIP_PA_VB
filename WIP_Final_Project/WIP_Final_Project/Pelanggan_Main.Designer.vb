@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Pelanggan_Main
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Pelanggan_Main
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Pelanggan_Main))
         Me.pnCanvas = New System.Windows.Forms.Panel()
@@ -33,7 +33,6 @@ Partial Class Pelanggan_Main
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.topLabel = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel4.SuspendLayout()
@@ -173,25 +172,12 @@ Partial Class Pelanggan_Main
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(153, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(143, Byte), Integer))
-        Me.Panel3.Controls.Add(Me.Label1)
         Me.Panel3.Controls.Add(Me.topLabel)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel3.Location = New System.Drawing.Point(0, 0)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(784, 561)
         Me.Panel3.TabIndex = 4
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Nirmala UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(223, 9)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(77, 17)
-        Me.Label1.TabIndex = 6
-        Me.Label1.Text = "namaMenu"
         '
         'topLabel
         '
@@ -200,7 +186,7 @@ Partial Class Pelanggan_Main
         Me.topLabel.Font = New System.Drawing.Font("Nirmala UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.topLabel.ForeColor = System.Drawing.Color.White
         Me.topLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.topLabel.Location = New System.Drawing.Point(28, 9)
+        Me.topLabel.Location = New System.Drawing.Point(223, 9)
         Me.topLabel.Name = "topLabel"
         Me.topLabel.Size = New System.Drawing.Size(77, 17)
         Me.topLabel.TabIndex = 0
@@ -238,5 +224,4 @@ Partial Class Pelanggan_Main
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel3 As Panel
     Friend WithEvents topLabel As Label
-    Friend WithEvents Label1 As Label
 End Class

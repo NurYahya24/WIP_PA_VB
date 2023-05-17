@@ -76,6 +76,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Karyawan_barang.Designer.vb">
+      <DependentUpon>Karyawan_barang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Karyawan_barang.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Karyawan_InputBarang.Designer.vb">
+      <DependentUpon>Karyawan_InputBarang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Karyawan_InputBarang.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Karyawan_Main.Designer.vb">
       <DependentUpon>Karyawan_Main.vb</DependentUpon>
     </Compile>
@@ -131,6 +143,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Karyawan_barang.resx">
+      <DependentUpon>Karyawan_barang.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Karyawan_InputBarang.resx">
+      <DependentUpon>Karyawan_InputBarang.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Karyawan_Main.resx">
       <DependentUpon>Karyawan_Main.vb</DependentUpon>
     </EmbeddedResource>

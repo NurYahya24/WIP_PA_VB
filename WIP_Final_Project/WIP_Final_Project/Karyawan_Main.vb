@@ -15,23 +15,33 @@ Public Class Karyawan_Main
     End Sub
 
     Private Sub btnBarang_Click(sender As Object, e As EventArgs) Handles btnBarang.Click
+        btnAddBarang.Visible = True
         pnCanvas.Controls.Clear()
         topLabel.Text = "Manajemen Data Barang__________________"
         btnBarang.BackColor = Color.Gray
         btnTransaksi.BackColor = Color.Transparent
         btnProfil.BackColor = Color.Transparent
+        With Karyawan_barang
+            .TopLevel = False
+            pnCanvas.Controls.Add(Karyawan_barang)
+            .BringToFront()
+            .Show()
+        End With
     End Sub
 
     Private Sub btnTransaksi_Click(sender As Object, e As EventArgs) Handles btnTransaksi.Click
+        btnAddBarang.Visible = False
         pnCanvas.Controls.Clear()
 
         topLabel.Text = "Manajemen Data Transaksi__________________"
         btnBarang.BackColor = Color.Transparent
         btnTransaksi.BackColor = Color.Gray
         btnProfil.BackColor = Color.Transparent
+
     End Sub
 
     Private Sub btnProfil_Click(sender As Object, e As EventArgs) Handles btnProfil.Click
+        btnAddBarang.Visible = False
         pnCanvas.Controls.Clear()
         topLabel.Text = "Profil_________________"
         btnBarang.BackColor = Color.Transparent
@@ -57,5 +67,24 @@ Public Class Karyawan_Main
         RD.Close()
     End Sub
 
-
+    Private Sub btnAddBarang_Click(sender As Object, e As EventArgs) Handles btnAddBarang.Click
+        btnAddBarang.Visible = False
+        topLabel.Text = "Tambah Data Barang________________"
+        pnCanvas.Controls.Clear()
+        With Karyawan_InputBarang
+            .TopLevel = False
+            pnCanvas.Controls.Add(Karyawan_InputBarang)
+            .BringToFront()
+            .Show()
+        End With
+        Karyawan_InputBarang.btnHapus.Visible = False
+        Karyawan_InputBarang.editKah = False
+        Karyawan_InputBarang.txtNama.Clear()
+        Karyawan_InputBarang.txtHarga.Clear()
+        Karyawan_InputBarang.txtDesk.Clear()
+        Karyawan_InputBarang.txtStok.Clear()
+        Karyawan_InputBarang.cbJenis.SelectedIndex = -1
+        Karyawan_InputBarang.cbTipe.SelectedIndex = -1
+        Karyawan_InputBarang.pbBarang.ImageLocation = ""
+    End Sub
 End Class
