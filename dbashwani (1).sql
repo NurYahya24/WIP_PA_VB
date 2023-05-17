@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 16, 2023 at 08:30 AM
+-- Generation Time: May 17, 2023 at 08:09 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -42,10 +42,10 @@ CREATE TABLE `tbakun` (
 --
 
 INSERT INTO `tbakun` (`id`, `nama`, `email`, `alamat`, `password`, `level`, `foto`) VALUES
-(1, 'Yahya', 'yha@gmail.com', 'Jl Panjaitan', '123', 'USER', ''),
+(1, 'Yahya', 'yha@gmail.com', 'Jl Panjaitan', '123', 'USER', 'yha@gmail.com.jpg'),
 (2, 'owner', 'owner', 'owner', 'owner', 'OWNER', ''),
 (4, 'Asep Gunawan', 'asep@gmail.com', 'Jl Mangkuraja', 'asep', 'KARYAWAN', 'asep@gmail.com.jpg'),
-(5, 'Kurniawan Mega', 'awan@gmail.com', 'Jl Panjaitan', '123', 'KARYAWAN', ''),
+(5, 'Kurniawan Mega', 'awan@gmail.com', 'Jl Panjaitan', '123', 'KARYAWAN', 'awan@gmail.com.jpg'),
 (7, 'Pawang Hujan', 'hujan@gmail.com', 'Jl Sukarno Hatta', 'hujan', 'USER', ''),
 (8, 'agung', 'agung@gmail.com', 'Jl Kelua', '123', 'USER', ''),
 (9, 'suparjan', 'ajan@gmail.com', 'Jl M.Said', '123', 'USER', '');
@@ -63,17 +63,21 @@ CREATE TABLE `tbbarang` (
   `jenis` text NOT NULL,
   `stok` int(11) NOT NULL,
   `harga` int(11) NOT NULL,
-  `desk` text NOT NULL
+  `desk` text NOT NULL,
+  `foto` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `tbbarang`
 --
 
-INSERT INTO `tbbarang` (`id`, `nama`, `tipe`, `jenis`, `stok`, `harga`, `desk`) VALUES
-(2, 'Martil', 'Alat', 'Non-Elektrik', 5, 75000, '-'),
-(3, 'Paku', 'Bahan', 'Bangunan', 120, 3000, 'paku beton'),
-(4, 'Lampu', 'Bahan', 'Properti', 0, 45000, '35 watt');
+INSERT INTO `tbbarang` (`id`, `nama`, `tipe`, `jenis`, `stok`, `harga`, `desk`, `foto`) VALUES
+(2, 'Martil', 'Alat', 'Non-Elektrik', 5, 75000, '-', 'Martil.jpg'),
+(3, 'Paku', 'Bahan', 'Bangunan', 120, 3000, 'paku beton', 'Paku.jpg'),
+(4, 'Semen', 'Bahan', 'Bangunan', 133, 170000, 'Semen Portland', 'Semen.jpg'),
+(5, 'test pen', 'Alat', 'Non-Elektrik', 123, 30000, 'Buat ngecek kabel putus', 'test pen.jpg'),
+(6, 'Sekop Pasir', 'Alat', 'Non-Elektrik', 100, 95000, 'Sekop pasir nih bos', 'Sekop Pasir.jpg'),
+(7, 'Tang Buaya', 'Alat', 'Non-Elektrik', 21, 133000, 'Tang Buaya nih bos', 'Tang Buaya.jpg');
 
 -- --------------------------------------------------------
 
@@ -142,7 +146,8 @@ ALTER TABLE `tbakun`
 -- Indexes for table `tbbarang`
 --
 ALTER TABLE `tbbarang`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `nama` (`nama`) USING HASH;
 
 --
 -- Indexes for table `tbgawai`
@@ -172,7 +177,7 @@ ALTER TABLE `tbakun`
 -- AUTO_INCREMENT for table `tbbarang`
 --
 ALTER TABLE `tbbarang`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `tbpesan`
