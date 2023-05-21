@@ -229,15 +229,16 @@ Partial Class Pelanggan_DetailBarang
         '
         'Button1
         '
-        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(153, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(143, Byte), Integer))
+        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(153, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(143, Byte), Integer))
+        Me.Button1.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.DodgerBlue
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Button1.Location = New System.Drawing.Point(220, 152)
         Me.Button1.Name = "Button1"
         Me.Button1.Padding = New System.Windows.Forms.Padding(0, 0, 10, 0)
-        Me.Button1.Size = New System.Drawing.Size(123, 38)
+        Me.Button1.Size = New System.Drawing.Size(126, 38)
         Me.Button1.TabIndex = 20
         Me.Button1.Text = "Tambahkan"
         Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -246,14 +247,15 @@ Partial Class Pelanggan_DetailBarang
         '
         'Button2
         '
-        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(153, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(143, Byte), Integer))
-        Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(153, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(143, Byte), Integer))
+        Me.Button2.BackColor = System.Drawing.Color.DodgerBlue
+        Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.Color.White
         Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button2.Location = New System.Drawing.Point(349, 152)
+        Me.Button2.Location = New System.Drawing.Point(352, 152)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(123, 38)
+        Me.Button2.Size = New System.Drawing.Size(132, 38)
         Me.Button2.TabIndex = 21
         Me.Button2.Text = "Hapus Dari Keranjang"
         Me.Button2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage

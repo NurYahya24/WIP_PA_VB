@@ -124,3 +124,8 @@ C:\Users\acer\OneDrive\Documents\Semester 4\WIP_PA_VB-main\WIP_Final_Project\WIP
 D:\Code\VisualBasic\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.Pelanggan_DetailBarang.resources
 D:\Code\VisualBasic\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.Pelanggan_Keranjang.resources
 D:\Code\VisualBasic\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.Pelanggan_Barang.resources
+C:\Users\A514-54G-32GJ\Documents\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.Karyawan_barang.resources
+C:\Users\A514-54G-32GJ\Documents\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.Karyawan_InputBarang.resources
+C:\Users\A514-54G-32GJ\Documents\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.Pelanggan_DetailBarang.resources
+C:\Users\A514-54G-32GJ\Documents\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.Pelanggan_Keranjang.resources
+C:\Users\A514-54G-32GJ\Documents\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.Pelanggan_Barang.resources

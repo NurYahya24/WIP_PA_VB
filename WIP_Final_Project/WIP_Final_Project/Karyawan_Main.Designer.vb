@@ -166,7 +166,7 @@ Partial Class Karyawan_Main
         '
         'Panel3
         '
-        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.Panel3.BackColor = System.Drawing.Color.DodgerBlue
         Me.Panel3.Controls.Add(Me.btnAddBarang)
         Me.Panel3.Controls.Add(Me.Panel5)
         Me.Panel3.Controls.Add(Me.topLabel)
@@ -210,7 +210,7 @@ Partial Class Karyawan_Main
         Me.topLabel.AutoSize = True
         Me.topLabel.BackColor = System.Drawing.Color.Transparent
         Me.topLabel.Font = New System.Drawing.Font("Nirmala UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.topLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.topLabel.ForeColor = System.Drawing.Color.White
         Me.topLabel.Location = New System.Drawing.Point(28, 9)
         Me.topLabel.Name = "topLabel"
         Me.topLabel.Size = New System.Drawing.Size(77, 17)

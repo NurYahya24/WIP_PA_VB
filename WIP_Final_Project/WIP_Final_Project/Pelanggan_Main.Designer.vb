@@ -33,9 +33,9 @@ Partial Class Pelanggan_Main
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.topLabel = New System.Windows.Forms.Label()
-        Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.topLabel = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel4.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -174,7 +174,7 @@ Partial Class Pelanggan_Main
         '
         'Panel3
         '
-        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(153, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(143, Byte), Integer))
+        Me.Panel3.BackColor = System.Drawing.Color.DodgerBlue
         Me.Panel3.Controls.Add(Me.Button1)
         Me.Panel3.Controls.Add(Me.Panel5)
         Me.Panel3.Controls.Add(Me.topLabel)
@@ -183,27 +183,6 @@ Partial Class Pelanggan_Main
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(584, 36)
         Me.Panel3.TabIndex = 4
-        '
-        'topLabel
-        '
-        Me.topLabel.AutoSize = True
-        Me.topLabel.BackColor = System.Drawing.Color.Transparent
-        Me.topLabel.Font = New System.Drawing.Font("Nirmala UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.topLabel.ForeColor = System.Drawing.Color.White
-        Me.topLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.topLabel.Location = New System.Drawing.Point(17, 9)
-        Me.topLabel.Name = "topLabel"
-        Me.topLabel.Size = New System.Drawing.Size(77, 17)
-        Me.topLabel.TabIndex = 0
-        Me.topLabel.Text = "namaMenu"
-        '
-        'Panel5
-        '
-        Me.Panel5.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel5.Location = New System.Drawing.Point(547, 0)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(37, 36)
-        Me.Panel5.TabIndex = 1
         '
         'Button1
         '
@@ -217,6 +196,27 @@ Partial Class Pelanggan_Main
         Me.Button1.Size = New System.Drawing.Size(38, 36)
         Me.Button1.TabIndex = 2
         Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Panel5
+        '
+        Me.Panel5.Dock = System.Windows.Forms.DockStyle.Right
+        Me.Panel5.Location = New System.Drawing.Point(547, 0)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(37, 36)
+        Me.Panel5.TabIndex = 1
+        '
+        'topLabel
+        '
+        Me.topLabel.AutoSize = True
+        Me.topLabel.BackColor = System.Drawing.Color.Transparent
+        Me.topLabel.Font = New System.Drawing.Font("Nirmala UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.topLabel.ForeColor = System.Drawing.Color.White
+        Me.topLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.topLabel.Location = New System.Drawing.Point(17, 9)
+        Me.topLabel.Name = "topLabel"
+        Me.topLabel.Size = New System.Drawing.Size(77, 17)
+        Me.topLabel.TabIndex = 0
+        Me.topLabel.Text = "namaMenu"
         '
         'Pelanggan_Main
         '

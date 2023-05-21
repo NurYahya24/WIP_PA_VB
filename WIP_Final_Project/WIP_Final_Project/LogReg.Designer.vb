@@ -149,20 +149,22 @@ Partial Class LogReg
         '
         'btnMasuk
         '
+        Me.btnMasuk.BackColor = System.Drawing.Color.DodgerBlue
         Me.btnMasuk.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnMasuk.Font = New System.Drawing.Font("Candara", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnMasuk.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnMasuk.ForeColor = System.Drawing.Color.White
         Me.btnMasuk.Location = New System.Drawing.Point(59, 284)
         Me.btnMasuk.Name = "btnMasuk"
         Me.btnMasuk.Size = New System.Drawing.Size(227, 44)
         Me.btnMasuk.TabIndex = 9
         Me.btnMasuk.Text = "MASUK"
-        Me.btnMasuk.UseVisualStyleBackColor = True
+        Me.btnMasuk.UseVisualStyleBackColor = False
         '
         'holderLog2
         '
         Me.holderLog2.AutoSize = True
         Me.holderLog2.BackColor = System.Drawing.Color.Transparent
-        Me.holderLog2.ForeColor = System.Drawing.Color.Gray
+        Me.holderLog2.ForeColor = System.Drawing.Color.DimGray
         Me.holderLog2.Location = New System.Drawing.Point(56, 203)
         Me.holderLog2.Name = "holderLog2"
         Me.holderLog2.Size = New System.Drawing.Size(53, 13)
@@ -173,7 +175,7 @@ Partial Class LogReg
         '
         Me.holderLog1.AutoSize = True
         Me.holderLog1.BackColor = System.Drawing.Color.Transparent
-        Me.holderLog1.ForeColor = System.Drawing.Color.Gray
+        Me.holderLog1.ForeColor = System.Drawing.Color.DimGray
         Me.holderLog1.Location = New System.Drawing.Point(56, 131)
         Me.holderLog1.Name = "holderLog1"
         Me.holderLog1.Size = New System.Drawing.Size(35, 13)
