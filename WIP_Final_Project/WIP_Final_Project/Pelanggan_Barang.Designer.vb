@@ -305,7 +305,7 @@ Partial Class Pelanggan_Barang
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel6.Location = New System.Drawing.Point(0, 0)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(67, 564)
+        Me.Panel6.Size = New System.Drawing.Size(67, 525)
         Me.Panel6.TabIndex = 16
         '
         'btnPrev
@@ -320,14 +320,14 @@ Partial Class Pelanggan_Barang
         Me.btnPrev.Image = CType(resources.GetObject("btnPrev.Image"), System.Drawing.Image)
         Me.btnPrev.Location = New System.Drawing.Point(0, 236)
         Me.btnPrev.Name = "btnPrev"
-        Me.btnPrev.Size = New System.Drawing.Size(67, 96)
+        Me.btnPrev.Size = New System.Drawing.Size(67, 57)
         Me.btnPrev.TabIndex = 6
         Me.btnPrev.UseVisualStyleBackColor = False
         '
         'Panel9
         '
         Me.Panel9.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel9.Location = New System.Drawing.Point(0, 332)
+        Me.Panel9.Location = New System.Drawing.Point(0, 293)
         Me.Panel9.Name = "Panel9"
         Me.Panel9.Size = New System.Drawing.Size(67, 232)
         Me.Panel9.TabIndex = 1
@@ -346,9 +346,9 @@ Partial Class Pelanggan_Barang
         Me.Panel7.Controls.Add(Me.Panel10)
         Me.Panel7.Controls.Add(Me.Panel11)
         Me.Panel7.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel7.Location = New System.Drawing.Point(533, 0)
+        Me.Panel7.Location = New System.Drawing.Point(517, 0)
         Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(67, 564)
+        Me.Panel7.Size = New System.Drawing.Size(67, 525)
         Me.Panel7.TabIndex = 17
         '
         'btnNext
@@ -363,14 +363,14 @@ Partial Class Pelanggan_Barang
         Me.btnNext.Image = CType(resources.GetObject("btnNext.Image"), System.Drawing.Image)
         Me.btnNext.Location = New System.Drawing.Point(0, 236)
         Me.btnNext.Name = "btnNext"
-        Me.btnNext.Size = New System.Drawing.Size(67, 96)
+        Me.btnNext.Size = New System.Drawing.Size(67, 57)
         Me.btnNext.TabIndex = 5
         Me.btnNext.UseVisualStyleBackColor = False
         '
         'Panel10
         '
         Me.Panel10.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel10.Location = New System.Drawing.Point(0, 332)
+        Me.Panel10.Location = New System.Drawing.Point(0, 293)
         Me.Panel10.Name = "Panel10"
         Me.Panel10.Size = New System.Drawing.Size(67, 232)
         Me.Panel10.TabIndex = 4
@@ -745,7 +745,7 @@ Partial Class Pelanggan_Barang
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(600, 564)
+        Me.ClientSize = New System.Drawing.Size(584, 525)
         Me.Controls.Add(Me.lbKosong)
         Me.Controls.Add(Me.dgvDataBarang)
         Me.Controls.Add(Me.Panel7)

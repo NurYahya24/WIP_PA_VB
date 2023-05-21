@@ -121,3 +121,6 @@ C:\Users\acer\OneDrive\Documents\Semester 4\WIP_PA_VB-main\WIP_Final_Project\WIP
 C:\Users\acer\OneDrive\Documents\Semester 4\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.Pelanggan_Barang.resources
 C:\Users\acer\OneDrive\Documents\Semester 4\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.Pelanggan_DetailBarang.resources
 C:\Users\acer\OneDrive\Documents\Semester 4\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.Pelanggan_Keranjang.resources
+D:\Code\VisualBasic\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.Pelanggan_DetailBarang.resources
+D:\Code\VisualBasic\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.Pelanggan_Keranjang.resources
+D:\Code\VisualBasic\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.Pelanggan_Barang.resources

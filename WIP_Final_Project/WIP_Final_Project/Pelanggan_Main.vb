@@ -19,6 +19,12 @@ Public Class Pelanggan_Main
         btnBarang.BackColor = Color.Gray
         btnTransaksi.BackColor = Color.Transparent
         btnProfil.BackColor = Color.Transparent
+        With Pelanggan_Barang
+            .TopLevel = False
+            pnCanvas.Controls.Add(Pelanggan_Barang)
+            .BringToFront()
+            .Show()
+        End With
     End Sub
 
     Private Sub btnTransaksi_Click(sender As Object, e As EventArgs) Handles btnTransaksi.Click
@@ -54,4 +60,17 @@ Public Class Pelanggan_Main
         RD.Close()
     End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        pnCanvas.Controls.Clear()
+        topLabel.Text = "Keranjang Saya__________________"
+        btnBarang.BackColor = Color.Transparent
+        btnTransaksi.BackColor = Color.Transparent
+        btnProfil.BackColor = Color.Transparent
+        With Pelanggan_Keranjang
+            .TopLevel = False
+            pnCanvas.Controls.Add(Pelanggan_Keranjang)
+            .BringToFront()
+            .Show()
+        End With
+    End Sub
 End Class

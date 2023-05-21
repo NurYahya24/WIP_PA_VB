@@ -82,6 +82,7 @@ Public Class Pelanggan_Barang
                 barang3.Visible = False
                 barang4.Visible = False
             Else
+                lbKosong.Visible = True
                 barang1.Visible = False
                 barang2.Visible = False
                 barang3.Visible = False
@@ -116,7 +117,6 @@ Public Class Pelanggan_Barang
         readDB()
     End Sub
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-        Pelanggan_DetailBarang.editKah = True
         Pelanggan_Main.topLabel.Text = "Detail Barang________________"
         Pelanggan_Main.pnCanvas.Controls.Clear()
         With Pelanggan_DetailBarang
@@ -125,41 +125,19 @@ Public Class Pelanggan_Barang
             .BringToFront()
             .Show()
         End With
-
         Pelanggan_DetailBarang.idBarang = idBarang.Text
-        Pelanggan_DetailBarang.txtNama.Text = dgvDataBarang.Rows(0).Cells(1).Value.ToString
-        Pelanggan_DetailBarang.txtHarga.Text = dgvDataBarang.Rows(0).Cells(5).Value.ToString
-        Pelanggan_DetailBarang.txtStok.Text = dgvDataBarang.Rows(0).Cells(4).Value.ToString
+        Pelanggan_DetailBarang.lbNama.Text = dgvDataBarang.Rows(0).Cells(1).Value.ToString
+        Pelanggan_DetailBarang.lbHarga.Text = dgvDataBarang.Rows(0).Cells(5).Value.ToString
+        Pelanggan_DetailBarang.lbTipe.Text = dgvDataBarang.Rows(0).Cells(2).Value.ToString
+        Pelanggan_DetailBarang.lbJenis.Text = dgvDataBarang.Rows(0).Cells(3).Value.ToString
         Pelanggan_DetailBarang.txtDesk.Text = dgvDataBarang.Rows(0).Cells(6).Value.ToString
         Pelanggan_DetailBarang.pbBarang.ImageLocation = alamat + dgvDataBarang.Rows(0).Cells(7).Value.ToString
-        If dgvDataBarang.Rows(0).Cells(2).Value.ToString = "Alat" Then
-            Pelanggan_DetailBarang.cbJenis.Items.RemoveAt(1)
-            Pelanggan_DetailBarang.cbJenis.Items.RemoveAt(0)
-            Pelanggan_DetailBarang.cbJenis.Items.Add("Elektrik")
-            Pelanggan_DetailBarang.cbJenis.Items.Add("Non-Elektrik")
-            Pelanggan_DetailBarang.cbTipe.SelectedIndex = 0
-            If dgvDataBarang.Rows(0).Cells(3).Value.ToString = "Elektrik" Then
-                Pelanggan_DetailBarang.cbJenis.SelectedIndex = 0
-            ElseIf dgvDataBarang.Rows(0).Cells(3).Value.ToString = "Non-Elektrik" Then
-                Pelanggan_DetailBarang.cbJenis.SelectedIndex = 1
-            End If
-        ElseIf dgvDataBarang.Rows(0).Cells(2).Value.ToString = "Bahan" Then
-            Pelanggan_DetailBarang.cbJenis.Items.RemoveAt(1)
-            Pelanggan_DetailBarang.cbJenis.Items.RemoveAt(0)
-            Pelanggan_DetailBarang.cbJenis.Items.Add("Bangunan")
-            Pelanggan_DetailBarang.cbJenis.Items.Add("Properti")
-            Pelanggan_DetailBarang.cbTipe.SelectedIndex = 1
-            If dgvDataBarang.Rows(0).Cells(3).Value.ToString = "Bangunan" Then
-                Pelanggan_DetailBarang.cbJenis.SelectedIndex = 0
-            ElseIf dgvDataBarang.Rows(0).Cells(3).Value.ToString = "Properti" Then
-                Pelanggan_DetailBarang.cbJenis.SelectedIndex = 1
-            End If
-        End If
+        Pelanggan_DetailBarang.lbStok.Text = dgvDataBarang.Rows(0).Cells(4).Value.ToString
+
 
     End Sub
 
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
-        Pelanggan_DetailBarang.editKah = True
         Pelanggan_Main.topLabel.Text = "Detail Barang________________"
         Pelanggan_Main.pnCanvas.Controls.Clear()
         With Pelanggan_DetailBarang
@@ -169,38 +147,16 @@ Public Class Pelanggan_Barang
             .Show()
         End With
         Pelanggan_DetailBarang.idBarang = idBarang2.Text
-        Pelanggan_DetailBarang.txtNama.Text = dgvDataBarang.Rows(1).Cells(1).Value.ToString
-        Pelanggan_DetailBarang.txtHarga.Text = dgvDataBarang.Rows(1).Cells(5).Value.ToString
-        Pelanggan_DetailBarang.txtStok.Text = dgvDataBarang.Rows(1).Cells(4).Value.ToString
+        Pelanggan_DetailBarang.lbNama.Text = dgvDataBarang.Rows(1).Cells(1).Value.ToString
+        Pelanggan_DetailBarang.lbHarga.Text = dgvDataBarang.Rows(1).Cells(5).Value.ToString
+        Pelanggan_DetailBarang.lbTipe.Text = dgvDataBarang.Rows(1).Cells(2).Value.ToString
+        Pelanggan_DetailBarang.lbJenis.Text = dgvDataBarang.Rows(1).Cells(3).Value.ToString
         Pelanggan_DetailBarang.txtDesk.Text = dgvDataBarang.Rows(1).Cells(6).Value.ToString
         Pelanggan_DetailBarang.pbBarang.ImageLocation = alamat + dgvDataBarang.Rows(1).Cells(7).Value.ToString
-        If dgvDataBarang.Rows(1).Cells(2).Value.ToString = "Alat" Then
-            Pelanggan_DetailBarang.cbJenis.Items.RemoveAt(1)
-            Pelanggan_DetailBarang.cbJenis.Items.RemoveAt(0)
-            Pelanggan_DetailBarang.cbJenis.Items.Add("Elektrik")
-            Pelanggan_DetailBarang.cbJenis.Items.Add("Non-Elektrik")
-            Pelanggan_DetailBarang.cbTipe.SelectedIndex = 0
-            If dgvDataBarang.Rows(1).Cells(3).Value.ToString = "Elektrik" Then
-                Pelanggan_DetailBarang.cbJenis.SelectedIndex = 0
-            ElseIf dgvDataBarang.Rows(1).Cells(3).Value.ToString = "Non-Elektrik" Then
-                Pelanggan_DetailBarang.cbJenis.SelectedIndex = 1
-            End If
-        ElseIf dgvDataBarang.Rows(1).Cells(2).Value.ToString = "Bahan" Then
-            Pelanggan_DetailBarang.cbJenis.Items.RemoveAt(1)
-            Pelanggan_DetailBarang.cbJenis.Items.RemoveAt(0)
-            Pelanggan_DetailBarang.cbJenis.Items.Add("Bangunan")
-            Pelanggan_DetailBarang.cbJenis.Items.Add("Properti")
-            Pelanggan_DetailBarang.cbTipe.SelectedIndex = 1
-            If dgvDataBarang.Rows(1).Cells(3).Value.ToString = "Bangunan" Then
-                Pelanggan_DetailBarang.cbJenis.SelectedIndex = 0
-            ElseIf dgvDataBarang.Rows(1).Cells(3).Value.ToString = "Properti" Then
-                Pelanggan_DetailBarang.cbJenis.SelectedIndex = 1
-            End If
-        End If
+        Pelanggan_DetailBarang.lbStok.Text = dgvDataBarang.Rows(1).Cells(4).Value.ToString
     End Sub
 
     Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
-        Pelanggan_DetailBarang.editKah = True
         Pelanggan_Main.topLabel.Text = "Detail Barang________________"
         Pelanggan_Main.pnCanvas.Controls.Clear()
         With Pelanggan_DetailBarang
@@ -210,38 +166,16 @@ Public Class Pelanggan_Barang
             .Show()
         End With
         Pelanggan_DetailBarang.idBarang = idBarang3.Text
-        Pelanggan_DetailBarang.txtNama.Text = dgvDataBarang.Rows(2).Cells(1).Value.ToString
-        Pelanggan_DetailBarang.txtHarga.Text = dgvDataBarang.Rows(2).Cells(5).Value.ToString
-        Pelanggan_DetailBarang.txtStok.Text = dgvDataBarang.Rows(2).Cells(4).Value.ToString
+        Pelanggan_DetailBarang.lbNama.Text = dgvDataBarang.Rows(2).Cells(1).Value.ToString
+        Pelanggan_DetailBarang.lbHarga.Text = dgvDataBarang.Rows(2).Cells(5).Value.ToString
+        Pelanggan_DetailBarang.lbTipe.Text = dgvDataBarang.Rows(2).Cells(2).Value.ToString
+        Pelanggan_DetailBarang.lbJenis.Text = dgvDataBarang.Rows(2).Cells(3).Value.ToString
         Pelanggan_DetailBarang.txtDesk.Text = dgvDataBarang.Rows(2).Cells(6).Value.ToString
         Pelanggan_DetailBarang.pbBarang.ImageLocation = alamat + dgvDataBarang.Rows(2).Cells(7).Value.ToString
-        If dgvDataBarang.Rows(2).Cells(2).Value.ToString = "Alat" Then
-            Pelanggan_DetailBarang.cbJenis.Items.RemoveAt(1)
-            Pelanggan_DetailBarang.cbJenis.Items.RemoveAt(0)
-            Pelanggan_DetailBarang.cbJenis.Items.Add("Elektrik")
-            Pelanggan_DetailBarang.cbJenis.Items.Add("Non-Elektrik")
-            Pelanggan_DetailBarang.cbTipe.SelectedIndex = 0
-            If dgvDataBarang.Rows(2).Cells(3).Value.ToString = "Elektrik" Then
-                Pelanggan_DetailBarang.cbJenis.SelectedIndex = 0
-            ElseIf dgvDataBarang.Rows(2).Cells(3).Value.ToString = "Non-Elektrik" Then
-                Pelanggan_DetailBarang.cbJenis.SelectedIndex = 1
-            End If
-        ElseIf dgvDataBarang.Rows(2).Cells(2).Value.ToString = "Bahan" Then
-            Pelanggan_DetailBarang.cbJenis.Items.RemoveAt(1)
-            Pelanggan_DetailBarang.cbJenis.Items.RemoveAt(0)
-            Pelanggan_DetailBarang.cbJenis.Items.Add("Bangunan")
-            Pelanggan_DetailBarang.cbJenis.Items.Add("Properti")
-            Pelanggan_DetailBarang.cbTipe.SelectedIndex = 1
-            If dgvDataBarang.Rows(2).Cells(3).Value.ToString = "Bangunan" Then
-                Pelanggan_DetailBarang.cbJenis.SelectedIndex = 0
-            ElseIf dgvDataBarang.Rows(2).Cells(3).Value.ToString = "Properti" Then
-                Pelanggan_DetailBarang.cbJenis.SelectedIndex = 1
-            End If
-        End If
+        Pelanggan_DetailBarang.lbStok.Text = dgvDataBarang.Rows(2).Cells(4).Value.ToString
     End Sub
 
     Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox4.Click
-        Pelanggan_DetailBarang.editKah = True
         Pelanggan_Main.topLabel.Text = "Detail Barang________________"
         Pelanggan_Main.pnCanvas.Controls.Clear()
         With Pelanggan_DetailBarang
@@ -250,35 +184,14 @@ Public Class Pelanggan_Barang
             .BringToFront()
             .Show()
         End With
-        Pelanggan_DetailBarang.idBarang = idBarang3.Text
-        Pelanggan_DetailBarang.txtNama.Text = dgvDataBarang.Rows(3).Cells(1).Value.ToString
-        Pelanggan_DetailBarang.txtHarga.Text = dgvDataBarang.Rows(3).Cells(5).Value.ToString
-        Pelanggan_DetailBarang.txtStok.Text = dgvDataBarang.Rows(3).Cells(4).Value.ToString
+        Pelanggan_DetailBarang.idBarang = idBarang4.Text
+        Pelanggan_DetailBarang.lbNama.Text = dgvDataBarang.Rows(3).Cells(1).Value.ToString
+        Pelanggan_DetailBarang.lbHarga.Text = dgvDataBarang.Rows(3).Cells(5).Value.ToString
+        Pelanggan_DetailBarang.lbTipe.Text = dgvDataBarang.Rows(3).Cells(2).Value.ToString
+        Pelanggan_DetailBarang.lbJenis.Text = dgvDataBarang.Rows(3).Cells(3).Value.ToString
         Pelanggan_DetailBarang.txtDesk.Text = dgvDataBarang.Rows(3).Cells(6).Value.ToString
         Pelanggan_DetailBarang.pbBarang.ImageLocation = alamat + dgvDataBarang.Rows(3).Cells(7).Value.ToString
-        If dgvDataBarang.Rows(3).Cells(2).Value.ToString = "Alat" Then
-            Pelanggan_DetailBarang.cbJenis.Items.RemoveAt(1)
-            Pelanggan_DetailBarang.cbJenis.Items.RemoveAt(0)
-            Pelanggan_DetailBarang.cbJenis.Items.Add("Elektrik")
-            Pelanggan_DetailBarang.cbJenis.Items.Add("Non-Elektrik")
-            Pelanggan_DetailBarang.cbTipe.SelectedIndex = 0
-            If dgvDataBarang.Rows(3).Cells(3).Value.ToString = "Elektrik" Then
-                Pelanggan_DetailBarang.cbJenis.SelectedIndex = 0
-            ElseIf dgvDataBarang.Rows(3).Cells(3).Value.ToString = "Non-Elektrik" Then
-                Pelanggan_DetailBarang.cbJenis.SelectedIndex = 1
-            End If
-        ElseIf dgvDataBarang.Rows(3).Cells(2).Value.ToString = "Bahan" Then
-            Pelanggan_DetailBarang.cbJenis.Items.RemoveAt(1)
-            Pelanggan_DetailBarang.cbJenis.Items.RemoveAt(0)
-            Pelanggan_DetailBarang.cbJenis.Items.Add("Bangunan")
-            Pelanggan_DetailBarang.cbJenis.Items.Add("Properti")
-            Pelanggan_DetailBarang.cbTipe.SelectedIndex = 1
-            If dgvDataBarang.Rows(3).Cells(3).Value.ToString = "Bangunan" Then
-                Pelanggan_DetailBarang.cbJenis.SelectedIndex = 0
-            ElseIf dgvDataBarang.Rows(3).Cells(3).Value.ToString = "Properti" Then
-                Pelanggan_DetailBarang.cbJenis.SelectedIndex = 1
-            End If
-        End If
+        Pelanggan_DetailBarang.lbStok.Text = dgvDataBarang.Rows(3).Cells(4).Value.ToString
     End Sub
     Private Sub btnPrev_Click(sender As Object, e As EventArgs) Handles btnPrev.Click
         dataAwal = dataAwal - batasDataHalaman

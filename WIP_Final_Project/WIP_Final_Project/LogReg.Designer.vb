@@ -26,6 +26,8 @@ Partial Class LogReg
         Me.pnBrand = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Regis = New System.Windows.Forms.LinkLabel()
         Me.pnLogin = New System.Windows.Forms.Panel()
         Me.btnMasuk = New System.Windows.Forms.Button()
@@ -53,13 +55,11 @@ Partial Class LogReg
         Me.Label4 = New System.Windows.Forms.Label()
         Me.LogIn = New System.Windows.Forms.LinkLabel()
         Me.btnExit = New System.Windows.Forms.Button()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.pnBrand.SuspendLayout()
-        Me.pnLogin.SuspendLayout()
-        Me.pnRegis.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnLogin.SuspendLayout()
+        Me.pnRegis.SuspendLayout()
         Me.SuspendLayout()
         '
         'pnBrand
@@ -77,9 +77,10 @@ Partial Class LogReg
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Palatino Linotype", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label2.ForeColor = System.Drawing.SystemColors.Window
-        Me.Label2.Location = New System.Drawing.Point(52, 259)
+        Me.Label2.Location = New System.Drawing.Point(69, 256)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(205, 18)
         Me.Label2.TabIndex = 2
@@ -88,13 +89,34 @@ Partial Class LogReg
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Palatino Linotype", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.Window
-        Me.Label1.Location = New System.Drawing.Point(47, 242)
+        Me.Label1.Location = New System.Drawing.Point(58, 238)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(222, 18)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "SELAMAT DATANG DI APLIKASI"
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox2.Location = New System.Drawing.Point(0, 238)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(223, 211)
+        Me.PictureBox2.TabIndex = 3
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(72, 83)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(169, 157)
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
         '
         'Regis
         '
@@ -392,26 +414,6 @@ Partial Class LogReg
         Me.btnExit.Text = "X"
         Me.btnExit.UseVisualStyleBackColor = False
         '
-        'PictureBox2
-        '
-        Me.PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox2.Location = New System.Drawing.Point(0, 238)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(223, 211)
-        Me.PictureBox2.TabIndex = 3
-        Me.PictureBox2.TabStop = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(72, 83)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(169, 157)
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
-        '
         'LogReg
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -427,12 +429,12 @@ Partial Class LogReg
         Me.Text = "LogReg"
         Me.pnBrand.ResumeLayout(False)
         Me.pnBrand.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnLogin.ResumeLayout(False)
         Me.pnLogin.PerformLayout()
         Me.pnRegis.ResumeLayout(False)
         Me.pnRegis.PerformLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
