@@ -75,3 +75,49 @@ D:\Code\VisualBasic\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug
 D:\Code\VisualBasic\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.xml
 D:\Code\VisualBasic\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.pdb
 D:\Code\VisualBasic\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.Karyawan_InputBarang.resources
+D:\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\bin\Debug\WIP_Final_Project.exe.config
+D:\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\bin\Debug\WIP_Final_Project.exe
+D:\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\bin\Debug\WIP_Final_Project.pdb
+D:\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\bin\Debug\WIP_Final_Project.xml
+D:\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\bin\Debug\mysql.data.dll
+D:\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.vbproj.AssemblyReference.cache
+D:\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.vbproj.SuggestedBindingRedirects.cache
+D:\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.Karyawan_barang.resources
+D:\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.Karyawan_InputBarang.resources
+D:\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.Karyawan_Main.resources
+D:\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.Karyawan_Profil.resources
+D:\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.LogReg.resources
+D:\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.Resources.resources
+D:\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.Pelanggan_Main.resources
+D:\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.Pelanggan_Profil.resources
+D:\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.Splash_screen.resources
+D:\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.vbproj.GenerateResource.cache
+D:\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.vbproj.CoreCompileInputs.cache
+D:\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.vbproj.CopyComplete
+D:\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.exe
+D:\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.xml
+D:\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.pdb
+C:\Users\acer\OneDrive\Documents\Semester 4\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\bin\Debug\WIP_Final_Project.exe.config
+C:\Users\acer\OneDrive\Documents\Semester 4\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\bin\Debug\WIP_Final_Project.exe
+C:\Users\acer\OneDrive\Documents\Semester 4\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\bin\Debug\WIP_Final_Project.pdb
+C:\Users\acer\OneDrive\Documents\Semester 4\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\bin\Debug\WIP_Final_Project.xml
+C:\Users\acer\OneDrive\Documents\Semester 4\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.vbproj.AssemblyReference.cache
+C:\Users\acer\OneDrive\Documents\Semester 4\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.vbproj.SuggestedBindingRedirects.cache
+C:\Users\acer\OneDrive\Documents\Semester 4\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.Karyawan_barang.resources
+C:\Users\acer\OneDrive\Documents\Semester 4\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.Karyawan_InputBarang.resources
+C:\Users\acer\OneDrive\Documents\Semester 4\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.Karyawan_Main.resources
+C:\Users\acer\OneDrive\Documents\Semester 4\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.Karyawan_Profil.resources
+C:\Users\acer\OneDrive\Documents\Semester 4\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.LogReg.resources
+C:\Users\acer\OneDrive\Documents\Semester 4\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.Resources.resources
+C:\Users\acer\OneDrive\Documents\Semester 4\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.Pelanggan_Main.resources
+C:\Users\acer\OneDrive\Documents\Semester 4\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.Pelanggan_Profil.resources
+C:\Users\acer\OneDrive\Documents\Semester 4\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.Splash_screen.resources
+C:\Users\acer\OneDrive\Documents\Semester 4\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.vbproj.GenerateResource.cache
+C:\Users\acer\OneDrive\Documents\Semester 4\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.vbproj.CoreCompileInputs.cache
+C:\Users\acer\OneDrive\Documents\Semester 4\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.vbproj.CopyComplete
+C:\Users\acer\OneDrive\Documents\Semester 4\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.exe
+C:\Users\acer\OneDrive\Documents\Semester 4\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.xml
+C:\Users\acer\OneDrive\Documents\Semester 4\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.pdb
+C:\Users\acer\OneDrive\Documents\Semester 4\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.Pelanggan_Barang.resources
+C:\Users\acer\OneDrive\Documents\Semester 4\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.Pelanggan_DetailBarang.resources
+C:\Users\acer\OneDrive\Documents\Semester 4\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.Pelanggan_Keranjang.resources

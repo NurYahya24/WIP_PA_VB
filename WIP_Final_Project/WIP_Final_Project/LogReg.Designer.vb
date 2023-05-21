@@ -26,7 +26,6 @@ Partial Class LogReg
         Me.pnBrand = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Regis = New System.Windows.Forms.LinkLabel()
         Me.pnLogin = New System.Windows.Forms.Panel()
         Me.btnMasuk = New System.Windows.Forms.Button()
@@ -54,17 +53,21 @@ Partial Class LogReg
         Me.Label4 = New System.Windows.Forms.Label()
         Me.LogIn = New System.Windows.Forms.LinkLabel()
         Me.btnExit = New System.Windows.Forms.Button()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.pnBrand.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnLogin.SuspendLayout()
         Me.pnRegis.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'pnBrand
         '
-        Me.pnBrand.BackColor = System.Drawing.Color.DarkSlateBlue
+        Me.pnBrand.BackColor = System.Drawing.Color.DodgerBlue
         Me.pnBrand.Controls.Add(Me.Label2)
         Me.pnBrand.Controls.Add(Me.Label1)
+        Me.pnBrand.Controls.Add(Me.PictureBox2)
         Me.pnBrand.Controls.Add(Me.PictureBox1)
         Me.pnBrand.Location = New System.Drawing.Point(325, 0)
         Me.pnBrand.Name = "pnBrand"
@@ -74,37 +77,30 @@ Partial Class LogReg
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Nirmala UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Palatino Linotype", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label2.ForeColor = System.Drawing.SystemColors.Window
-        Me.Label2.Location = New System.Drawing.Point(63, 272)
+        Me.Label2.Location = New System.Drawing.Point(52, 259)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(226, 17)
+        Me.Label2.Size = New System.Drawing.Size(205, 18)
         Me.Label2.TabIndex = 2
-        Me.Label2.Text = "NALULUNOD NA SILA SA LUNGKOT"
+        Me.Label2.Text = "TOKO BANGUNAN ASHWANI" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Nirmala UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Palatino Linotype", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.Window
-        Me.Label1.Location = New System.Drawing.Point(78, 254)
+        Me.Label1.Location = New System.Drawing.Point(47, 242)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(201, 17)
+        Me.Label1.Size = New System.Drawing.Size(222, 18)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "SELAMAT DATANG DI APLIKASI"
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(72, 83)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(169, 157)
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
         '
         'Regis
         '
         Me.Regis.AutoSize = True
+        Me.Regis.DisabledLinkColor = System.Drawing.Color.DodgerBlue
+        Me.Regis.LinkColor = System.Drawing.Color.DodgerBlue
         Me.Regis.Location = New System.Drawing.Point(145, 350)
         Me.Regis.Name = "Regis"
         Me.Regis.Size = New System.Drawing.Size(53, 13)
@@ -182,7 +178,7 @@ Partial Class LogReg
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Candara", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.SystemColors.MenuHighlight
+        Me.Label3.ForeColor = System.Drawing.Color.DodgerBlue
         Me.Label3.Location = New System.Drawing.Point(212, 49)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(74, 26)
@@ -193,20 +189,22 @@ Partial Class LogReg
         '
         Me.txtLogPass.BackColor = System.Drawing.Color.Lavender
         Me.txtLogPass.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtLogPass.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtLogPass.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtLogPass.Location = New System.Drawing.Point(59, 228)
+        Me.txtLogPass.Multiline = True
         Me.txtLogPass.Name = "txtLogPass"
-        Me.txtLogPass.Size = New System.Drawing.Size(227, 19)
+        Me.txtLogPass.Size = New System.Drawing.Size(227, 20)
         Me.txtLogPass.TabIndex = 3
         '
         'txtLogNama
         '
         Me.txtLogNama.BackColor = System.Drawing.Color.Lavender
         Me.txtLogNama.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtLogNama.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtLogNama.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtLogNama.Location = New System.Drawing.Point(59, 156)
+        Me.txtLogNama.Multiline = True
         Me.txtLogNama.Name = "txtLogNama"
-        Me.txtLogNama.Size = New System.Drawing.Size(227, 19)
+        Me.txtLogNama.Size = New System.Drawing.Size(227, 20)
         Me.txtLogNama.TabIndex = 2
         '
         'pnRegis
@@ -382,7 +380,7 @@ Partial Class LogReg
         '
         'btnExit
         '
-        Me.btnExit.BackColor = System.Drawing.Color.DarkSlateBlue
+        Me.btnExit.BackColor = System.Drawing.Color.DodgerBlue
         Me.btnExit.FlatAppearance.BorderSize = 0
         Me.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnExit.Font = New System.Drawing.Font("MS Reference Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -393,6 +391,26 @@ Partial Class LogReg
         Me.btnExit.TabIndex = 3
         Me.btnExit.Text = "X"
         Me.btnExit.UseVisualStyleBackColor = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox2.Location = New System.Drawing.Point(0, 238)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(223, 211)
+        Me.PictureBox2.TabIndex = 3
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(72, 83)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(169, 157)
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
         '
         'LogReg
         '
@@ -409,11 +427,12 @@ Partial Class LogReg
         Me.Text = "LogReg"
         Me.pnBrand.ResumeLayout(False)
         Me.pnBrand.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnLogin.ResumeLayout(False)
         Me.pnLogin.PerformLayout()
         Me.pnRegis.ResumeLayout(False)
         Me.pnRegis.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -449,4 +468,5 @@ Partial Class LogReg
     Friend WithEvents txtRegPass As TextBox
     Friend WithEvents btnDaftar As Button
     Friend WithEvents btnExit As Button
+    Friend WithEvents PictureBox2 As PictureBox
 End Class

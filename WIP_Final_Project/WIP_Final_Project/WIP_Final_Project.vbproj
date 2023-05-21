@@ -107,6 +107,18 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Module1.vb" />
+    <Compile Include="Pelanggan_DetailBarang.Designer.vb">
+      <DependentUpon>Pelanggan_DetailBarang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pelanggan_DetailBarang.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pelanggan_Keranjang.Designer.vb">
+      <DependentUpon>Pelanggan_Keranjang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pelanggan_Keranjang.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Pelanggan_Main.Designer.vb">
       <DependentUpon>Pelanggan_Main.vb</DependentUpon>
     </Compile>
@@ -117,6 +129,12 @@
       <DependentUpon>Pelanggan_Profil.vb</DependentUpon>
     </Compile>
     <Compile Include="Pelanggan_Profil.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pelanggan_Barang.Designer.vb">
+      <DependentUpon>Pelanggan_Barang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pelanggan_Barang.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Splash_screen.vb">
@@ -164,11 +182,20 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Pelanggan_DetailBarang.resx">
+      <DependentUpon>Pelanggan_DetailBarang.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pelanggan_Keranjang.resx">
+      <DependentUpon>Pelanggan_Keranjang.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pelanggan_Main.resx">
       <DependentUpon>Pelanggan_Main.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pelanggan_Profil.resx">
       <DependentUpon>Pelanggan_Profil.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pelanggan_Barang.resx">
+      <DependentUpon>Pelanggan_Barang.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Splash_screen.resx">
       <DependentUpon>Splash_screen.vb</DependentUpon>
@@ -188,6 +215,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logoAshwani.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-building-52.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-building-521.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-building-6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bngn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgn.png.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgn.png-removebg-preview.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

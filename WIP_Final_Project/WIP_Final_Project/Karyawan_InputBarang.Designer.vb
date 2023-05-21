@@ -23,7 +23,6 @@ Partial Class Karyawan_InputBarang
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Karyawan_InputBarang))
-        Me.pbBarang = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtNama = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -42,21 +41,11 @@ Partial Class Karyawan_InputBarang
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.btnBatal = New System.Windows.Forms.Button()
-        Me.btnHapus = New System.Windows.Forms.Button()
         Me.BukaFile = New System.Windows.Forms.OpenFileDialog()
+        Me.btnHapus = New System.Windows.Forms.Button()
+        Me.pbBarang = New System.Windows.Forms.PictureBox()
         CType(Me.pbBarang, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'pbBarang
-        '
-        Me.pbBarang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.pbBarang.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.pbBarang.Location = New System.Drawing.Point(45, 35)
-        Me.pbBarang.Name = "pbBarang"
-        Me.pbBarang.Size = New System.Drawing.Size(155, 155)
-        Me.pbBarang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.pbBarang.TabIndex = 0
-        Me.pbBarang.TabStop = False
         '
         'Label1
         '
@@ -237,6 +226,10 @@ Partial Class Karyawan_InputBarang
         Me.btnBatal.Text = "Batal"
         Me.btnBatal.UseVisualStyleBackColor = False
         '
+        'BukaFile
+        '
+        Me.BukaFile.FileName = "OpenFileDialog1"
+        '
         'btnHapus
         '
         Me.btnHapus.BackColor = System.Drawing.Color.Red
@@ -254,9 +247,16 @@ Partial Class Karyawan_InputBarang
         Me.btnHapus.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnHapus.UseVisualStyleBackColor = False
         '
-        'BukaFile
+        'pbBarang
         '
-        Me.BukaFile.FileName = "OpenFileDialog1"
+        Me.pbBarang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.pbBarang.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.pbBarang.Location = New System.Drawing.Point(45, 35)
+        Me.pbBarang.Name = "pbBarang"
+        Me.pbBarang.Size = New System.Drawing.Size(155, 155)
+        Me.pbBarang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbBarang.TabIndex = 0
+        Me.pbBarang.TabStop = False
         '
         'Karyawan_InputBarang
         '

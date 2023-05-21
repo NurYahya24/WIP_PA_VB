@@ -112,12 +112,6 @@ Public Class Karyawan_barang
         End If
     End Sub
 
-    Private Sub btnPrev_Click(sender As Object, e As EventArgs) Handles btnPrev.Click
-        dataAwal = dataAwal - batasDataHalaman
-        readDB()
-
-    End Sub
-
     Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
         dataAwal = dataAwal + batasDataHalaman
         readDB()
@@ -294,5 +288,10 @@ Public Class Karyawan_barang
                 Karyawan_InputBarang.cbJenis.SelectedIndex = 1
             End If
         End If
+    End Sub
+
+    Private Sub btnPrev_Click(sender As Object, e As EventArgs) Handles btnPrev.Click
+        dataAwal = dataAwal - batasDataHalaman
+        readDB()
     End Sub
 End Class

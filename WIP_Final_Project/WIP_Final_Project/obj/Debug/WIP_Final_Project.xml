@@ -22,7 +22,37 @@ WIP_Final_Project
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:WIP_Final_Project.My.Resources.Resources.bgn_png">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:WIP_Final_Project.My.Resources.Resources.bgn_png_removebg_preview">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:WIP_Final_Project.My.Resources.Resources.bngn">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:WIP_Final_Project.My.Resources.Resources.logoAshwani">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:WIP_Final_Project.My.Resources.Resources.png_building_52">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:WIP_Final_Project.My.Resources.Resources.png_building_521">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:WIP_Final_Project.My.Resources.Resources.png_building_6">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

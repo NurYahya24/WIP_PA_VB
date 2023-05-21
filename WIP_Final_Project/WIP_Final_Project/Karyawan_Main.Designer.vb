@@ -24,22 +24,22 @@ Partial Class Karyawan_Main
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Karyawan_Main))
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.topLabel = New System.Windows.Forms.Label()
-        Me.pnCanvas = New System.Windows.Forms.Panel()
         Me.btnExit = New System.Windows.Forms.Button()
         Me.btnProfil = New System.Windows.Forms.Button()
         Me.btnTransaksi = New System.Windows.Forms.Button()
         Me.btnBarang = New System.Windows.Forms.Button()
+        Me.Panel4 = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Panel3 = New System.Windows.Forms.Panel()
         Me.btnAddBarang = New System.Windows.Forms.Button()
         Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.topLabel = New System.Windows.Forms.Label()
+        Me.pnCanvas = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         Me.Panel4.SuspendLayout()
-        Me.Panel3.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -56,56 +56,6 @@ Partial Class Karyawan_Main
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(200, 600)
         Me.Panel1.TabIndex = 0
-        '
-        'Panel4
-        '
-        Me.Panel4.Controls.Add(Me.PictureBox1)
-        Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel4.Location = New System.Drawing.Point(0, 36)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(200, 100)
-        Me.Panel4.TabIndex = 1
-        '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(53, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(72, Byte), Integer))
-        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel2.Location = New System.Drawing.Point(0, 0)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(200, 36)
-        Me.Panel2.TabIndex = 0
-        '
-        'Panel3
-        '
-        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
-        Me.Panel3.Controls.Add(Me.btnAddBarang)
-        Me.Panel3.Controls.Add(Me.Panel5)
-        Me.Panel3.Controls.Add(Me.topLabel)
-        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel3.Location = New System.Drawing.Point(200, 0)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(600, 36)
-        Me.Panel3.TabIndex = 1
-        '
-        'topLabel
-        '
-        Me.topLabel.AutoSize = True
-        Me.topLabel.BackColor = System.Drawing.Color.Transparent
-        Me.topLabel.Font = New System.Drawing.Font("Nirmala UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.topLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.topLabel.Location = New System.Drawing.Point(28, 9)
-        Me.topLabel.Name = "topLabel"
-        Me.topLabel.Size = New System.Drawing.Size(77, 17)
-        Me.topLabel.TabIndex = 0
-        Me.topLabel.Text = "namaMenu"
-        '
-        'pnCanvas
-        '
-        Me.pnCanvas.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnCanvas.Location = New System.Drawing.Point(200, 36)
-        Me.pnCanvas.Name = "pnCanvas"
-        Me.pnCanvas.Size = New System.Drawing.Size(600, 564)
-        Me.pnCanvas.TabIndex = 2
         '
         'btnExit
         '
@@ -187,6 +137,15 @@ Partial Class Karyawan_Main
         Me.btnBarang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnBarang.UseVisualStyleBackColor = True
         '
+        'Panel4
+        '
+        Me.Panel4.Controls.Add(Me.PictureBox1)
+        Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel4.Location = New System.Drawing.Point(0, 36)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(200, 100)
+        Me.Panel4.TabIndex = 1
+        '
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
@@ -195,6 +154,27 @@ Partial Class Karyawan_Main
         Me.PictureBox1.Size = New System.Drawing.Size(151, 75)
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(53, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(72, Byte), Integer))
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel2.Location = New System.Drawing.Point(0, 0)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(200, 36)
+        Me.Panel2.TabIndex = 0
+        '
+        'Panel3
+        '
+        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.Panel3.Controls.Add(Me.btnAddBarang)
+        Me.Panel3.Controls.Add(Me.Panel5)
+        Me.Panel3.Controls.Add(Me.topLabel)
+        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel3.Location = New System.Drawing.Point(200, 0)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(600, 36)
+        Me.Panel3.TabIndex = 1
         '
         'btnAddBarang
         '
@@ -225,6 +205,26 @@ Partial Class Karyawan_Main
         Me.Panel5.Size = New System.Drawing.Size(29, 36)
         Me.Panel5.TabIndex = 2
         '
+        'topLabel
+        '
+        Me.topLabel.AutoSize = True
+        Me.topLabel.BackColor = System.Drawing.Color.Transparent
+        Me.topLabel.Font = New System.Drawing.Font("Nirmala UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.topLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.topLabel.Location = New System.Drawing.Point(28, 9)
+        Me.topLabel.Name = "topLabel"
+        Me.topLabel.Size = New System.Drawing.Size(77, 17)
+        Me.topLabel.TabIndex = 0
+        Me.topLabel.Text = "namaMenu"
+        '
+        'pnCanvas
+        '
+        Me.pnCanvas.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.pnCanvas.Location = New System.Drawing.Point(200, 36)
+        Me.pnCanvas.Name = "pnCanvas"
+        Me.pnCanvas.Size = New System.Drawing.Size(600, 564)
+        Me.pnCanvas.TabIndex = 2
+        '
         'Karyawan_Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -239,9 +239,9 @@ Partial Class Karyawan_Main
         Me.Text = "Karyawan_Main"
         Me.Panel1.ResumeLayout(False)
         Me.Panel4.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

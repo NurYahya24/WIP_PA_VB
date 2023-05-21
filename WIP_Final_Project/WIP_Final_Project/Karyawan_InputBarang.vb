@@ -38,10 +38,6 @@ Public Class Karyawan_InputBarang
         End If
     End Sub
 
-    Private Sub Karyawan_InputBarang_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
-
     Private Sub btnSimpan_Click(sender As Object, e As EventArgs) Handles btnSimpan.Click
         kondisi = True
         Call koneksi()
@@ -79,5 +75,9 @@ Public Class Karyawan_InputBarang
         BukaFile.Filter = "Picture files(*.jpg)|*.jpg"
         BukaFile.ShowDialog()
         pbBarang.ImageLocation = BukaFile.FileName
+    End Sub
+
+    Private Sub Karyawan_InputBarang_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

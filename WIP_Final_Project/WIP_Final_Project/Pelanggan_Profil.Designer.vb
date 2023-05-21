@@ -36,8 +36,8 @@ Partial Class Pelanggan_Profil
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.pbProfilePic = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.pbProfilePic = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         CType(Me.pbProfilePic, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -48,14 +48,14 @@ Partial Class Pelanggan_Profil
         '
         'Button1
         '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(53, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(72, Byte), Integer))
         Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(324, 392)
+        Me.Button1.Location = New System.Drawing.Point(333, 396)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(134, 48)
+        Me.Button1.Size = New System.Drawing.Size(125, 44)
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "Simpan"
         Me.Button1.UseVisualStyleBackColor = False
@@ -173,6 +173,14 @@ Partial Class Pelanggan_Profil
         Me.Panel1.Size = New System.Drawing.Size(490, 455)
         Me.Panel1.TabIndex = 5
         '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Panel2.Location = New System.Drawing.Point(232, 12)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(105, 105)
+        Me.Panel2.TabIndex = 19
+        '
         'pbProfilePic
         '
         Me.pbProfilePic.BackColor = System.Drawing.Color.Transparent
@@ -184,14 +192,6 @@ Partial Class Pelanggan_Profil
         Me.pbProfilePic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.pbProfilePic.TabIndex = 18
         Me.pbProfilePic.TabStop = False
-        '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.Panel2.Location = New System.Drawing.Point(232, 12)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(105, 105)
-        Me.Panel2.TabIndex = 19
         '
         'Pelanggan_Profil
         '

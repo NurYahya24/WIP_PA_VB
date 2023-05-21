@@ -117,11 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="BukaFile.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnHapus.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DwAACw8BkvkDpQAAAelJREFUSEvdlUsohFEUx0ekZMWGjUexYCsUa68QSxtqUsjGSikbVlIWHhuPrMxO
+        DAAACwwBP0AiyAAAAelJREFUSEvdlUsohFEUx0ekZMWGjUexYCsUa68QSxtqUsjGSikbVlIWHhuPrMxO
         lFIUs7CwMIwNtoqsFFZKEsf/PG5G7nwzYzbyq19zzv3+99xvvuYR+jMQUQXcg/EEuS+3SPZg2CJ8g4cJ
         cr9gkczB5gJYC9vhEOQ7f4ETCXLP63ydc5wvsBF+EKiDZ/AeZgPv5zl1NvoLLFbCxDvN1kob/R1cKITu
         mW/BTXMNrsIVOGvOQDdwHA6bgzDPRv4EF3MgP+tseIU5NtIPAjcS/T23Nio5CJ1olo5hCbyQTonBInt1
@@ -132,7 +135,4 @@
         OKJ7MiZiI1KDcBi6/5JMDNuIf0ko9Ale1N4QMnpV3wAAAABJRU5ErkJggg==
 </value>
   </data>
-  <metadata name="BukaFile.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
 </root>
