@@ -2,9 +2,27 @@
 
 Public Class Pelanggan_Main
     Public Property Id As Integer
+    Public Property idCart As Integer
+
+    Sub AdaCart()
+        Call koneksi()
+        CMD = New MySqlCommand("select tbkeranjang.id as 'id' from tbkeranjang join tbakun on tbkeranjang.id_user = tbakun.id where tbakun.id = '" & Id & "'", CONN)
+        RD = CMD.ExecuteReader
+        RD.Read()
+        If Not RD.HasRows Then
+            RD.Close()
+            CMD = New MySqlCommand("insert into tbkeranjang(id, id_user) values('0', '" & Id & "')", CONN)
+            CMD.ExecuteNonQuery()
+            AdaCart()
+        Else
+            idCart = RD.GetString(0)
+            RD.Close()
+        End If
+    End Sub
 
     Private Sub Pelanggan_Main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call koneksi()
+        AdaCart()
         btnBarang.PerformClick()
     End Sub
 
@@ -72,5 +90,8 @@ Public Class Pelanggan_Main
             .BringToFront()
             .Show()
         End With
+        Pelanggan_Keranjang.refreshPage()
+        Pelanggan_Keranjang.readDB()
     End Sub
+
 End Class

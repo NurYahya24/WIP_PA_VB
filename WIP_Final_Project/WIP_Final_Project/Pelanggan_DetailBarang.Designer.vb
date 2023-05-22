@@ -41,8 +41,8 @@ Partial Class Pelanggan_DetailBarang
         Me.lbHarga = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnAdd = New System.Windows.Forms.Button()
+        Me.btnDel = New System.Windows.Forms.Button()
         CType(Me.pbBarang, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -82,6 +82,7 @@ Partial Class Pelanggan_DetailBarang
         'txtDesk
         '
         Me.txtDesk.Cursor = System.Windows.Forms.Cursors.Default
+        Me.txtDesk.Enabled = False
         Me.txtDesk.Location = New System.Drawing.Point(40, 355)
         Me.txtDesk.Multiline = True
         Me.txtDesk.Name = "txtDesk"
@@ -227,39 +228,39 @@ Partial Class Pelanggan_DetailBarang
         Me.Panel3.Size = New System.Drawing.Size(338, 26)
         Me.Panel3.TabIndex = 7
         '
-        'Button1
+        'btnAdd
         '
-        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.DodgerBlue
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button1.Location = New System.Drawing.Point(220, 152)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Padding = New System.Windows.Forms.Padding(0, 0, 10, 0)
-        Me.Button1.Size = New System.Drawing.Size(126, 38)
-        Me.Button1.TabIndex = 20
-        Me.Button1.Text = "Tambahkan"
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue
+        Me.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAdd.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAdd.ForeColor = System.Drawing.Color.DodgerBlue
+        Me.btnAdd.Image = CType(resources.GetObject("btnAdd.Image"), System.Drawing.Image)
+        Me.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnAdd.Location = New System.Drawing.Point(220, 152)
+        Me.btnAdd.Name = "btnAdd"
+        Me.btnAdd.Padding = New System.Windows.Forms.Padding(0, 0, 10, 0)
+        Me.btnAdd.Size = New System.Drawing.Size(126, 38)
+        Me.btnAdd.TabIndex = 20
+        Me.btnAdd.Text = "Tambahkan"
+        Me.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.btnAdd.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btnDel
         '
-        Me.Button2.BackColor = System.Drawing.Color.DodgerBlue
-        Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button2.Location = New System.Drawing.Point(352, 152)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(132, 38)
-        Me.Button2.TabIndex = 21
-        Me.Button2.Text = "Hapus Dari Keranjang"
-        Me.Button2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.btnDel.BackColor = System.Drawing.Color.DodgerBlue
+        Me.btnDel.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue
+        Me.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnDel.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDel.ForeColor = System.Drawing.Color.White
+        Me.btnDel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnDel.Location = New System.Drawing.Point(352, 152)
+        Me.btnDel.Name = "btnDel"
+        Me.btnDel.Size = New System.Drawing.Size(132, 38)
+        Me.btnDel.TabIndex = 21
+        Me.btnDel.Text = "Hapus Dari Keranjang"
+        Me.btnDel.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.btnDel.UseVisualStyleBackColor = False
         '
         'Pelanggan_DetailBarang
         '
@@ -267,8 +268,8 @@ Partial Class Pelanggan_DetailBarang
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(584, 525)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnDel)
+        Me.Controls.Add(Me.btnAdd)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.lbStok)
         Me.Controls.Add(Me.lbJenis)
@@ -311,6 +312,6 @@ Partial Class Pelanggan_DetailBarang
     Friend WithEvents lbHarga As Label
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel3 As Panel
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btnAdd As Button
+    Friend WithEvents btnDel As Button
 End Class

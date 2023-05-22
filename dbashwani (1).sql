@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 17, 2023 at 08:09 AM
+-- Generation Time: May 22, 2023 at 06:04 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -72,7 +72,7 @@ CREATE TABLE `tbbarang` (
 --
 
 INSERT INTO `tbbarang` (`id`, `nama`, `tipe`, `jenis`, `stok`, `harga`, `desk`, `foto`) VALUES
-(2, 'Martil', 'Alat', 'Non-Elektrik', 5, 75000, '-', 'Martil.jpg'),
+(2, 'Martil', 'Alat', 'Non-Elektrik', 5, 75000, 'Martil adalah', 'Martil.jpg'),
 (3, 'Paku', 'Bahan', 'Bangunan', 120, 3000, 'paku beton', 'Paku.jpg'),
 (4, 'Semen', 'Bahan', 'Bangunan', 133, 170000, 'Semen Portland', 'Semen.jpg'),
 (5, 'test pen', 'Alat', 'Non-Elektrik', 123, 30000, 'Buat ngecek kabel putus', 'test pen.jpg'),
@@ -102,34 +102,41 @@ INSERT INTO `tbgawai` (`gaji`, `shift`, `email`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbpesan`
+-- Table structure for table `tbkeranjang`
 --
 
-CREATE TABLE `tbpesan` (
-  `idPesan` int(11) NOT NULL,
-  `idPel` int(11) NOT NULL,
-  `idBar` int(11) NOT NULL,
-  `qty` int(11) NOT NULL,
-  `status` text NOT NULL
+CREATE TABLE `tbkeranjang` (
+  `id` int(11) NOT NULL,
+  `id_user` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `tbpesan`
+-- Dumping data for table `tbkeranjang`
 --
 
-INSERT INTO `tbpesan` (`idPesan`, `idPel`, `idBar`, `qty`, `status`) VALUES
-(1, 1, 2, 3, 'Selesai'),
-(2, 1, 2, 12, 'Selesai'),
-(3, 1, 4, 13, 'Selesai'),
-(4, 1, 3, 10, 'Dibatalkan'),
-(5, 1, 4, 13, 'Dibatalkan'),
-(6, 1, 2, 3, 'Dibatalkan'),
-(7, 1, 4, 30, 'Dibatalkan'),
-(8, 1, 4, 13, 'Dibatalkan'),
-(9, 1, 4, 5, 'Dibatalkan'),
-(10, 1, 2, 10, 'Dibatalkan'),
-(11, 1, 2, 12, 'Dibatalkan'),
-(12, 1, 2, 7, 'Selesai');
+INSERT INTO `tbkeranjang` (`id`, `id_user`) VALUES
+(1, 1),
+(2, 9);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbkeranjang_item`
+--
+
+CREATE TABLE `tbkeranjang_item` (
+  `idkeranjang` int(11) NOT NULL,
+  `idbarang` int(11) NOT NULL,
+  `qty` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tbkeranjang_item`
+--
+
+INSERT INTO `tbkeranjang_item` (`idkeranjang`, `idbarang`, `qty`) VALUES
+(1, 6, 1),
+(1, 7, 1);
 
 --
 -- Indexes for dumped tables
@@ -156,12 +163,18 @@ ALTER TABLE `tbgawai`
   ADD KEY `email` (`email`(768));
 
 --
--- Indexes for table `tbpesan`
+-- Indexes for table `tbkeranjang`
 --
-ALTER TABLE `tbpesan`
-  ADD PRIMARY KEY (`idPesan`),
-  ADD KEY `fk_idPelanggan` (`idPel`),
-  ADD KEY `fk_idBarang` (`idBar`);
+ALTER TABLE `tbkeranjang`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_idUser_1` (`id_user`);
+
+--
+-- Indexes for table `tbkeranjang_item`
+--
+ALTER TABLE `tbkeranjang_item`
+  ADD KEY `fk_idBarang_1` (`idbarang`),
+  ADD KEY `fk_idKeranjang_1` (`idkeranjang`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -180,21 +193,27 @@ ALTER TABLE `tbbarang`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT for table `tbpesan`
+-- AUTO_INCREMENT for table `tbkeranjang`
 --
-ALTER TABLE `tbpesan`
-  MODIFY `idPesan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+ALTER TABLE `tbkeranjang`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Constraints for dumped tables
 --
 
 --
--- Constraints for table `tbpesan`
+-- Constraints for table `tbkeranjang`
 --
-ALTER TABLE `tbpesan`
-  ADD CONSTRAINT `fk_idBarang` FOREIGN KEY (`idBar`) REFERENCES `tbbarang` (`id`),
-  ADD CONSTRAINT `fk_idPelanggan` FOREIGN KEY (`idPel`) REFERENCES `tbakun` (`id`);
+ALTER TABLE `tbkeranjang`
+  ADD CONSTRAINT `fk_idUser_1` FOREIGN KEY (`id_user`) REFERENCES `tbakun` (`id`);
+
+--
+-- Constraints for table `tbkeranjang_item`
+--
+ALTER TABLE `tbkeranjang_item`
+  ADD CONSTRAINT `fk_idBarang_1` FOREIGN KEY (`idbarang`) REFERENCES `tbbarang` (`id`),
+  ADD CONSTRAINT `fk_idKeranjang_1` FOREIGN KEY (`idkeranjang`) REFERENCES `tbkeranjang` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

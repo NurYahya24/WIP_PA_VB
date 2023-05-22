@@ -133,6 +133,7 @@ Public Class Pelanggan_Barang
         Pelanggan_DetailBarang.txtDesk.Text = dgvDataBarang.Rows(0).Cells(6).Value.ToString
         Pelanggan_DetailBarang.pbBarang.ImageLocation = alamat + dgvDataBarang.Rows(0).Cells(7).Value.ToString
         Pelanggan_DetailBarang.lbStok.Text = dgvDataBarang.Rows(0).Cells(4).Value.ToString
+        Pelanggan_DetailBarang.cek()
 
 
     End Sub
@@ -154,6 +155,7 @@ Public Class Pelanggan_Barang
         Pelanggan_DetailBarang.txtDesk.Text = dgvDataBarang.Rows(1).Cells(6).Value.ToString
         Pelanggan_DetailBarang.pbBarang.ImageLocation = alamat + dgvDataBarang.Rows(1).Cells(7).Value.ToString
         Pelanggan_DetailBarang.lbStok.Text = dgvDataBarang.Rows(1).Cells(4).Value.ToString
+        Pelanggan_DetailBarang.cek()
     End Sub
 
     Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
@@ -173,6 +175,7 @@ Public Class Pelanggan_Barang
         Pelanggan_DetailBarang.txtDesk.Text = dgvDataBarang.Rows(2).Cells(6).Value.ToString
         Pelanggan_DetailBarang.pbBarang.ImageLocation = alamat + dgvDataBarang.Rows(2).Cells(7).Value.ToString
         Pelanggan_DetailBarang.lbStok.Text = dgvDataBarang.Rows(2).Cells(4).Value.ToString
+        Pelanggan_DetailBarang.cek()
     End Sub
 
     Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox4.Click
@@ -192,6 +195,7 @@ Public Class Pelanggan_Barang
         Pelanggan_DetailBarang.txtDesk.Text = dgvDataBarang.Rows(3).Cells(6).Value.ToString
         Pelanggan_DetailBarang.pbBarang.ImageLocation = alamat + dgvDataBarang.Rows(3).Cells(7).Value.ToString
         Pelanggan_DetailBarang.lbStok.Text = dgvDataBarang.Rows(3).Cells(4).Value.ToString
+        Pelanggan_DetailBarang.cek()
     End Sub
     Private Sub btnPrev_Click(sender As Object, e As EventArgs) Handles btnPrev.Click
         dataAwal = dataAwal - batasDataHalaman
