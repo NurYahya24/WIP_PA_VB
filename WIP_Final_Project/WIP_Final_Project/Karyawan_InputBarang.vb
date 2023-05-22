@@ -45,10 +45,13 @@ Public Class Karyawan_InputBarang
         Dim des As String = alamat + txtNama.Text + ".jpg"
         If pbBarang.Image IsNot Nothing Then
             If (My.Computer.FileSystem.FileExists(des)) Then
-                My.Computer.FileSystem.DeleteFile(des)
-                My.Computer.FileSystem.CopyFile(BukaFile.FileName, des)
+                If Not (des = pbBarang.ImageLocation) Then
+                    My.Computer.FileSystem.DeleteFile(des)
+                    My.Computer.FileSystem.CopyFile(pbBarang.ImageLocation, des)
+                End If
+
             Else
-                My.Computer.FileSystem.CopyFile(BukaFile.FileName, des)
+                My.Computer.FileSystem.CopyFile(pbBarang.ImageLocation, des)
             End If
         End If
         Dim query As String = ""
@@ -77,7 +80,4 @@ Public Class Karyawan_InputBarang
         pbBarang.ImageLocation = BukaFile.FileName
     End Sub
 
-    Private Sub Karyawan_InputBarang_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 End Class

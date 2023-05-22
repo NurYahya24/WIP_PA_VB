@@ -23,11 +23,6 @@ Partial Class LogReg
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(LogReg))
-        Me.pnBrand = New System.Windows.Forms.Panel()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Regis = New System.Windows.Forms.LinkLabel()
         Me.pnLogin = New System.Windows.Forms.Panel()
         Me.btnMasuk = New System.Windows.Forms.Button()
@@ -55,68 +50,17 @@ Partial Class LogReg
         Me.Label4 = New System.Windows.Forms.Label()
         Me.LogIn = New System.Windows.Forms.LinkLabel()
         Me.btnExit = New System.Windows.Forms.Button()
-        Me.pnBrand.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.pnBrand = New System.Windows.Forms.Panel()
         Me.pnLogin.SuspendLayout()
         Me.pnRegis.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnBrand.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'pnBrand
-        '
-        Me.pnBrand.BackColor = System.Drawing.Color.DodgerBlue
-        Me.pnBrand.Controls.Add(Me.Label2)
-        Me.pnBrand.Controls.Add(Me.Label1)
-        Me.pnBrand.Controls.Add(Me.PictureBox2)
-        Me.pnBrand.Controls.Add(Me.PictureBox1)
-        Me.pnBrand.Location = New System.Drawing.Point(325, 0)
-        Me.pnBrand.Name = "pnBrand"
-        Me.pnBrand.Size = New System.Drawing.Size(325, 452)
-        Me.pnBrand.TabIndex = 0
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Palatino Linotype", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Label2.ForeColor = System.Drawing.SystemColors.Window
-        Me.Label2.Location = New System.Drawing.Point(69, 256)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(205, 18)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "TOKO BANGUNAN ASHWANI" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Palatino Linotype", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.SystemColors.Window
-        Me.Label1.Location = New System.Drawing.Point(58, 238)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(222, 18)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "SELAMAT DATANG DI APLIKASI"
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox2.Location = New System.Drawing.Point(0, 238)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(223, 211)
-        Me.PictureBox2.TabIndex = 3
-        Me.PictureBox2.TabStop = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(72, 83)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(169, 157)
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
         '
         'Regis
         '
@@ -256,14 +200,16 @@ Partial Class LogReg
         '
         'btnDaftar
         '
+        Me.btnDaftar.BackColor = System.Drawing.Color.DodgerBlue
         Me.btnDaftar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnDaftar.Font = New System.Drawing.Font("Candara", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDaftar.ForeColor = System.Drawing.Color.White
         Me.btnDaftar.Location = New System.Drawing.Point(61, 350)
         Me.btnDaftar.Name = "btnDaftar"
         Me.btnDaftar.Size = New System.Drawing.Size(227, 44)
         Me.btnDaftar.TabIndex = 20
         Me.btnDaftar.Text = "DAFTAR"
-        Me.btnDaftar.UseVisualStyleBackColor = True
+        Me.btnDaftar.UseVisualStyleBackColor = False
         '
         'Label8
         '
@@ -395,6 +341,7 @@ Partial Class LogReg
         'LogIn
         '
         Me.LogIn.AutoSize = True
+        Me.LogIn.LinkColor = System.Drawing.Color.DodgerBlue
         Me.LogIn.Location = New System.Drawing.Point(156, 409)
         Me.LogIn.Name = "LogIn"
         Me.LogIn.Size = New System.Drawing.Size(37, 13)
@@ -416,6 +363,62 @@ Partial Class LogReg
         Me.btnExit.Text = "X"
         Me.btnExit.UseVisualStyleBackColor = False
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(72, 83)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(169, 157)
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackgroundImage = Global.WIP_Final_Project.My.Resources.Resources.png_building_521
+        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox2.Location = New System.Drawing.Point(0, 238)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(223, 211)
+        Me.PictureBox2.TabIndex = 3
+        Me.PictureBox2.TabStop = False
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Palatino Linotype", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.Window
+        Me.Label1.Location = New System.Drawing.Point(58, 238)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(222, 18)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "SELAMAT DATANG DI APLIKASI"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Palatino Linotype", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label2.ForeColor = System.Drawing.SystemColors.Window
+        Me.Label2.Location = New System.Drawing.Point(69, 256)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(205, 18)
+        Me.Label2.TabIndex = 2
+        Me.Label2.Text = "TOKO BANGUNAN ASHWANI" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        '
+        'pnBrand
+        '
+        Me.pnBrand.BackColor = System.Drawing.Color.DodgerBlue
+        Me.pnBrand.Controls.Add(Me.Label2)
+        Me.pnBrand.Controls.Add(Me.Label1)
+        Me.pnBrand.Controls.Add(Me.PictureBox2)
+        Me.pnBrand.Controls.Add(Me.PictureBox1)
+        Me.pnBrand.Location = New System.Drawing.Point(325, 0)
+        Me.pnBrand.Name = "pnBrand"
+        Me.pnBrand.Size = New System.Drawing.Size(325, 452)
+        Me.pnBrand.TabIndex = 0
+        '
         'LogReg
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -429,26 +432,21 @@ Partial Class LogReg
         Me.Name = "LogReg"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "LogReg"
-        Me.pnBrand.ResumeLayout(False)
-        Me.pnBrand.PerformLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnLogin.ResumeLayout(False)
         Me.pnLogin.PerformLayout()
         Me.pnRegis.ResumeLayout(False)
         Me.pnRegis.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnBrand.ResumeLayout(False)
+        Me.pnBrand.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
-
-    Friend WithEvents pnBrand As Panel
     Friend WithEvents Regis As LinkLabel
     Friend WithEvents pnLogin As Panel
     Friend WithEvents pnRegis As Panel
     Friend WithEvents LogIn As LinkLabel
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents txtLogPass As TextBox
     Friend WithEvents txtLogNama As TextBox
@@ -472,5 +470,9 @@ Partial Class LogReg
     Friend WithEvents txtRegPass As TextBox
     Friend WithEvents btnDaftar As Button
     Friend WithEvents btnExit As Button
+    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents pnBrand As Panel
 End Class

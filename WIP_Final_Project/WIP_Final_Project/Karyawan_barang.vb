@@ -294,4 +294,8 @@ Public Class Karyawan_barang
         dataAwal = dataAwal - batasDataHalaman
         readDB()
     End Sub
+
+    Private Sub OpenFileDialog1_FileOk(sender As Object, e As System.ComponentModel.CancelEventArgs)
+
+    End Sub
 End Class

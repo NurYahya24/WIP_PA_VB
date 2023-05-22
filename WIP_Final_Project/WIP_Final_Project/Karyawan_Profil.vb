@@ -26,10 +26,12 @@ Public Class Karyawan_Profil
         Dim des As String = alamat + txtMail.Text + ".jpg"
         If pbProfilePic.Image IsNot Nothing Then
             If (My.Computer.FileSystem.FileExists(des)) Then
-                My.Computer.FileSystem.DeleteFile(des)
-                My.Computer.FileSystem.CopyFile(BukaFile.FileName, des)
+                If Not (pbProfilePic.ImageLocation = des) Then
+                    My.Computer.FileSystem.DeleteFile(des)
+                    My.Computer.FileSystem.CopyFile(pbProfilePic.ImageLocation, des)
+                End If
             Else
-                My.Computer.FileSystem.CopyFile(BukaFile.FileName, des)
+                My.Computer.FileSystem.CopyFile(pbProfilePic.ImageLocation, des)
             End If
         End If
         Dim ubah As String = "update tbakun set nama='" & txtNama.Text & "', email= '" & txtMail.Text & "', alamat = '" & txtAlamat.Text & "', foto = '" & txtMail.Text + ".jpg" & "' where id= '" & Karyawan_Main.Id & "'"
@@ -41,8 +43,6 @@ Public Class Karyawan_Profil
             CMD.ExecuteNonQuery()
             MsgBox("Data Berhasil Disimpan.....|", MsgBoxStyle.Information, "Perhatian")
         End If
-
-
     End Sub
 
 End Class

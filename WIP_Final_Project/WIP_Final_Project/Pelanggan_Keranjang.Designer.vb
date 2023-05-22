@@ -930,11 +930,12 @@ Partial Class Pelanggan_Keranjang
         'lbKosong
         '
         Me.lbKosong.AutoSize = True
-        Me.lbKosong.Location = New System.Drawing.Point(13, 44)
+        Me.lbKosong.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbKosong.Location = New System.Drawing.Point(169, 234)
         Me.lbKosong.Name = "lbKosong"
-        Me.lbKosong.Size = New System.Drawing.Size(94, 13)
+        Me.lbKosong.Size = New System.Drawing.Size(215, 20)
         Me.lbKosong.TabIndex = 15
-        Me.lbKosong.Text = "Keranjang Kosong"
+        Me.lbKosong.Text = "-----Keranjang Kosong-----"
         Me.lbKosong.Visible = False
         '
         'Pelanggan_Keranjang

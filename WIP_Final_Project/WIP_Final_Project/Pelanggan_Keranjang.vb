@@ -36,6 +36,32 @@ Public Class Pelanggan_Keranjang
 
     End Sub
 
+    Sub addQty(ByVal idTambah As Integer)
+        Dim tambah As String = "update tbkeranjang_item set qty=qty+1 where idbarang='" & idTambah & "' and idkeranjang='" & Pelanggan_Main.idCart & "'"
+        Call koneksi()
+        CMD = New MySqlCommand(tambah, CONN)
+        CMD.ExecuteNonQuery()
+        refreshPage()
+        readDB()
+    End Sub
+
+    Sub minQty(ByVal idKurang As Integer)
+        Dim kurang As String = "update tbkeranjang_item set qty=qty-1 where idbarang='" & idKurang & "' and idkeranjang='" & Pelanggan_Main.idCart & "'"
+        Call koneksi()
+        CMD = New MySqlCommand(kurang, CONN)
+        CMD.ExecuteNonQuery()
+        refreshPage()
+        readDB()
+    End Sub
+
+    Sub cancelItem(ByVal idHapus As Integer)
+        Dim hapus As String = "Delete from tbkeranjang_item where idbarang='" & idHapus & "' and idkeranjang='" & Pelanggan_Main.idCart & "'"
+        Call koneksi()
+        CMD = New MySqlCommand(hapus, CONN)
+        CMD.ExecuteNonQuery()
+        refreshPage()
+        readDB()
+    End Sub
 
     Sub readDB()
         Try
@@ -173,5 +199,105 @@ Public Class Pelanggan_Keranjang
         dataAwal = dataAwal + batasDataHalaman
         langkah = langkah + 1
         readDB()
+    End Sub
+
+    Private Sub btnAdd1_Click(sender As Object, e As EventArgs) Handles btnAdd1.Click
+        addQty(dgvKeranjang.Rows(0).Cells(0).Value.ToString)
+    End Sub
+
+    Private Sub btnAdd2_Click(sender As Object, e As EventArgs) Handles btnAdd2.Click
+        addQty(dgvKeranjang.Rows(1).Cells(0).Value.ToString)
+    End Sub
+
+    Private Sub btnAdd3_Click(sender As Object, e As EventArgs) Handles btnAdd3.Click
+        addQty(dgvKeranjang.Rows(2).Cells(0).Value.ToString)
+    End Sub
+
+    Private Sub btnAdd4_Click(sender As Object, e As EventArgs) Handles btnAdd4.Click
+        addQty(dgvKeranjang.Rows(3).Cells(0).Value.ToString)
+    End Sub
+
+    Private Sub btnAdd5_Click(sender As Object, e As EventArgs) Handles btnAdd5.Click
+        addQty(dgvKeranjang.Rows(4).Cells(0).Value.ToString)
+    End Sub
+
+    Private Sub btnMin1_Click(sender As Object, e As EventArgs) Handles btnMin1.Click
+        If lbQty1.Text = 1 Then
+            Dim cancel As String
+            cancel = MessageBox.Show("Apakah Anda Yakin Ingin Menghapus?", "Perhatian!", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+            If cancel = MsgBoxResult.Yes Then
+                cancelItem(dgvKeranjang.Rows(0).Cells(0).Value.ToString)
+            End If
+        Else
+            minQty(dgvKeranjang.Rows(0).Cells(0).Value.ToString)
+        End If
+    End Sub
+
+    Private Sub btnMin2_Click(sender As Object, e As EventArgs) Handles btnMin2.Click
+        If lbQty2.Text = 1 Then
+            Dim cancel As String
+            cancel = MessageBox.Show("Apakah Anda Yakin Ingin Menghapus?", "Perhatian!", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+            If cancel = MsgBoxResult.Yes Then
+                cancelItem(dgvKeranjang.Rows(1).Cells(0).Value.ToString)
+            End If
+        Else
+            minQty(dgvKeranjang.Rows(1).Cells(0).Value.ToString)
+        End If
+    End Sub
+
+    Private Sub btnMin3_Click(sender As Object, e As EventArgs) Handles btnMin3.Click
+        If lbQty3.Text = 1 Then
+            Dim cancel As String
+            cancel = MessageBox.Show("Apakah Anda Yakin Ingin Menghapus?", "Perhatian!", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+            If cancel = MsgBoxResult.Yes Then
+                cancelItem(dgvKeranjang.Rows(2).Cells(0).Value.ToString)
+            End If
+        Else
+            minQty(dgvKeranjang.Rows(2).Cells(0).Value.ToString)
+        End If
+    End Sub
+
+    Private Sub btnMin4_Click(sender As Object, e As EventArgs) Handles btnMin4.Click
+        If lbQty4.Text = 1 Then
+            Dim cancel As String
+            cancel = MessageBox.Show("Apakah Anda Yakin Ingin Menghapus?", "Perhatian!", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+            If cancel = MsgBoxResult.Yes Then
+                cancelItem(dgvKeranjang.Rows(3).Cells(0).Value.ToString)
+            End If
+        Else
+            minQty(dgvKeranjang.Rows(3).Cells(0).Value.ToString)
+        End If
+    End Sub
+
+    Private Sub btnMin5_Click(sender As Object, e As EventArgs) Handles btnMin5.Click
+        If lbQty1.Text = 1 Then
+            Dim cancel As String
+            cancel = MessageBox.Show("Apakah Anda Yakin Ingin Menghapus?", "Perhatian!", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+            If cancel = MsgBoxResult.Yes Then
+                cancelItem(dgvKeranjang.Rows(4).Cells(0).Value.ToString)
+            End If
+        Else
+            minQty(dgvKeranjang.Rows(4).Cells(0).Value.ToString)
+        End If
+    End Sub
+
+    Private Sub btnRm1_Click(sender As Object, e As EventArgs) Handles btnRm1.Click
+        cancelItem(dgvKeranjang.Rows(0).Cells(0).Value.ToString)
+    End Sub
+
+    Private Sub btnRm2_Click(sender As Object, e As EventArgs) Handles btnRm2.Click
+        cancelItem(dgvKeranjang.Rows(1).Cells(0).Value.ToString)
+    End Sub
+
+    Private Sub btnRm3_Click(sender As Object, e As EventArgs) Handles btnRm3.Click
+        cancelItem(dgvKeranjang.Rows(2).Cells(0).Value.ToString)
+    End Sub
+
+    Private Sub btnRm4_Click(sender As Object, e As EventArgs) Handles btnRm4.Click
+        cancelItem(dgvKeranjang.Rows(3).Cells(0).Value.ToString)
+    End Sub
+
+    Private Sub btnRm5_Click(sender As Object, e As EventArgs) Handles btnRm5.Click
+        cancelItem(dgvKeranjang.Rows(4).Cells(0).Value.ToString)
     End Sub
 End Class

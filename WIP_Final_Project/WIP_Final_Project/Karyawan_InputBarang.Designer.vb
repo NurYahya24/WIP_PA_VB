@@ -59,7 +59,7 @@ Partial Class Karyawan_InputBarang
         '
         'txtNama
         '
-        Me.txtNama.BackColor = System.Drawing.Color.LightGray
+        Me.txtNama.BackColor = System.Drawing.Color.White
         Me.txtNama.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtNama.Location = New System.Drawing.Point(233, 59)
         Me.txtNama.Name = "txtNama"
@@ -84,7 +84,7 @@ Partial Class Karyawan_InputBarang
         '
         'txtHarga
         '
-        Me.txtHarga.BackColor = System.Drawing.Color.LightGray
+        Me.txtHarga.BackColor = System.Drawing.Color.White
         Me.txtHarga.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtHarga.Location = New System.Drawing.Point(261, 130)
         Me.txtHarga.Name = "txtHarga"
@@ -118,6 +118,7 @@ Partial Class Karyawan_InputBarang
         '
         'txtDesk
         '
+        Me.txtDesk.BackColor = System.Drawing.Color.LightGray
         Me.txtDesk.Location = New System.Drawing.Point(45, 381)
         Me.txtDesk.Multiline = True
         Me.txtDesk.Name = "txtDesk"
@@ -136,7 +137,7 @@ Partial Class Karyawan_InputBarang
         '
         'cbJenis
         '
-        Me.cbJenis.BackColor = System.Drawing.Color.White
+        Me.cbJenis.BackColor = System.Drawing.Color.LightGray
         Me.cbJenis.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbJenis.FormattingEnabled = True
         Me.cbJenis.Items.AddRange(New Object() {"1", "2"})
@@ -165,7 +166,7 @@ Partial Class Karyawan_InputBarang
         '
         'txtStok
         '
-        Me.txtStok.BackColor = System.Drawing.Color.LightGray
+        Me.txtStok.BackColor = System.Drawing.Color.White
         Me.txtStok.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtStok.Location = New System.Drawing.Point(45, 237)
         Me.txtStok.Name = "txtStok"
@@ -184,6 +185,7 @@ Partial Class Karyawan_InputBarang
         '
         'cbTipe
         '
+        Me.cbTipe.BackColor = System.Drawing.Color.LightGray
         Me.cbTipe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbTipe.FormattingEnabled = True
         Me.cbTipe.Items.AddRange(New Object() {"Alat", "Bahan"})
@@ -262,7 +264,7 @@ Partial Class Karyawan_InputBarang
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.LightGray
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(600, 564)
         Me.Controls.Add(Me.btnHapus)
         Me.Controls.Add(Me.btnBatal)

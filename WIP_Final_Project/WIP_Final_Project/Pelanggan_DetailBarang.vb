@@ -37,4 +37,8 @@ Public Class Pelanggan_DetailBarang
         MsgBox("Barang Berhasil Dihapus.....|", MsgBoxStyle.Information, "Perhatian")
         cek()
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Pelanggan_Main.btnBarang.PerformClick()
+    End Sub
 End Class

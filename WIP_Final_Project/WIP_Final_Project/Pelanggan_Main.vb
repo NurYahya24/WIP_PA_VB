@@ -29,6 +29,7 @@ Public Class Pelanggan_Main
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
         Me.Dispose()
         LogReg.Show()
+        Button1.Visible = True
     End Sub
 
     Private Sub btnBarang_Click(sender As Object, e As EventArgs) Handles btnBarang.Click
@@ -43,6 +44,7 @@ Public Class Pelanggan_Main
             .BringToFront()
             .Show()
         End With
+        Button1.Visible = True
     End Sub
 
     Private Sub btnTransaksi_Click(sender As Object, e As EventArgs) Handles btnTransaksi.Click
@@ -52,6 +54,7 @@ Public Class Pelanggan_Main
         btnBarang.BackColor = Color.Transparent
         btnTransaksi.BackColor = Color.Gray
         btnProfil.BackColor = Color.Transparent
+        Button1.Visible = True
     End Sub
 
     Private Sub btnProfil_Click(sender As Object, e As EventArgs) Handles btnProfil.Click
@@ -76,6 +79,7 @@ Public Class Pelanggan_Main
             Pelanggan_Profil.pbProfilePic.ImageLocation = CurDir() + "\gambar\profil\" + RD.GetString(6)
         End If
         RD.Close()
+        Button1.Visible = True
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -92,6 +96,8 @@ Public Class Pelanggan_Main
         End With
         Pelanggan_Keranjang.refreshPage()
         Pelanggan_Keranjang.readDB()
+        Button1.Visible = False
+
     End Sub
 
 End Class
