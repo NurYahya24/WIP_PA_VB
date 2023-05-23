@@ -6,6 +6,8 @@ Public Class Pelanggan_DetailBarang
     Public Property idBarang As Integer
 
     Sub cek()
+        btnAdd.Visible = True
+        btnDel.Visible = True
         Try
             CMD = New MySqlCommand("select * from tbkeranjang_item where idkeranjang = '" & Pelanggan_Main.idCart & "' and idbarang = '" & idBarang & "'", CONN)
             RD = CMD.ExecuteReader
@@ -41,4 +43,6 @@ Public Class Pelanggan_DetailBarang
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Pelanggan_Main.btnBarang.PerformClick()
     End Sub
+
+
 End Class

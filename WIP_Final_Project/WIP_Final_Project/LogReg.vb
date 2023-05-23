@@ -17,7 +17,8 @@ Public Class LogReg
                 Pelanggan_Main.Id = RD.GetValue(0)
                 Pelanggan_Main.Show()
             ElseIf RD.GetString(1) = "OWNER" Then
-                MessageBox.Show("OWNER FRAME SOON")
+                Me.Dispose()
+                Owner_Main.Show()
             End If
         Else
             MessageBox.Show("NAMA ATAU PASSWORD SALAH")
@@ -106,4 +107,5 @@ Public Class LogReg
             End If
         End If
     End Sub
+
 End Class

@@ -107,6 +107,24 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Module1.vb" />
+    <Compile Include="Owner_Barang.Designer.vb">
+      <DependentUpon>Owner_Barang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Owner_Barang.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Owner_Karyawan.Designer.vb">
+      <DependentUpon>Owner_Karyawan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Owner_Karyawan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Owner_Main.Designer.vb">
+      <DependentUpon>Owner_Main.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Owner_Main.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Pelanggan_DetailBarang.Designer.vb">
       <DependentUpon>Pelanggan_DetailBarang.vb</DependentUpon>
     </Compile>
@@ -181,6 +199,15 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Owner_Barang.resx">
+      <DependentUpon>Owner_Barang.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Owner_Karyawan.resx">
+      <DependentUpon>Owner_Karyawan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Owner_Main.resx">
+      <DependentUpon>Owner_Main.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pelanggan_DetailBarang.resx">
       <DependentUpon>Pelanggan_DetailBarang.vb</DependentUpon>

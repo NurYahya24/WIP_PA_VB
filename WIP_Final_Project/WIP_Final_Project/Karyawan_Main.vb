@@ -88,7 +88,6 @@ Public Class Karyawan_Main
         Karyawan_InputBarang.pbBarang.ImageLocation = ""
     End Sub
 
-    Private Sub pnCanvas_Paint(sender As Object, e As PaintEventArgs) Handles pnCanvas.Paint
 
-    End Sub
+
 End Class
