@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 24, 2023 at 10:08 AM
+-- Generation Time: May 24, 2023 at 05:14 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -42,13 +42,13 @@ CREATE TABLE `tbakun` (
 --
 
 INSERT INTO `tbakun` (`id`, `nama`, `email`, `alamat`, `password`, `level`, `foto`) VALUES
-(1, 'Yahya', 'yha@gmail.com', 'Jl Panjaitan', '123', 'USER', 'yha@gmail.com.jpg'),
+(1, 'Yahya', 'yha@gmail.com', 'Jl Panjaitan', 'yahya', 'USER', 'yha@gmail.com.jpg'),
 (2, 'owner', 'owner', 'owner', 'owner', 'OWNER', ''),
 (4, 'Asep Gunawan', 'asep@gmail.com', 'Jl Mangkuraja', 'asep', 'KARYAWAN', 'asep@gmail.com.jpg'),
 (5, 'Kurniawan Mega', 'awan@gmail.com', 'Jl Panjaitan', '123', 'KARYAWAN', 'awan@gmail.com.jpg'),
 (7, 'Pawang Hujan', 'hujan@gmail.com', 'Jl Sukarno Hatta', 'hujan', 'USER', ''),
 (8, 'agung', 'agung@gmail.com', 'Jl Kelua', '123', 'USER', ''),
-(9, 'suparjan', 'ajan@gmail.com', 'Jl M.Said', '123', 'USER', '');
+(9, 'suparjan', 'ajan@gmail.com', 'Jl M.Said', 'ajan', 'USER', '');
 
 -- --------------------------------------------------------
 
@@ -72,15 +72,14 @@ CREATE TABLE `tbbarang` (
 --
 
 INSERT INTO `tbbarang` (`id`, `nama`, `tipe`, `jenis`, `stok`, `harga`, `desk`, `foto`) VALUES
-(2, 'Martil', 'Alat', 'Non-Elektrik', 5, 75000, 'Martil adalah', 'Martil.jpg'),
-(3, 'Paku', 'Bahan', 'Bangunan', 120, 3000, 'paku beton', 'Paku.jpg'),
-(4, 'Semen', 'Bahan', 'Bangunan', 133, 170000, 'Semen Portland', 'Semen.jpg'),
-(5, 'test pen', 'Alat', 'Non-Elektrik', 123, 30000, 'Buat ngecek kabel putus', 'test pen.jpg'),
-(6, 'Sekop Pasir', 'Alat', 'Non-Elektrik', 100, 95000, 'Sekop pasir nih bos', 'Sekop Pasir.jpg'),
-(7, 'Tang Buaya', 'Alat', 'Non-Elektrik', 21, 133000, 'Tang Buaya nih bos', 'Tang Buaya.jpg'),
+(3, 'Paku', 'Bahan', 'Bangunan', 108, 3000, 'paku beton', 'Paku.jpg'),
+(4, 'Semen', 'Bahan', 'Bangunan', 129, 170000, 'Semen Portland', 'Semen.jpg'),
+(5, 'test pen', 'Alat', 'Non-Elektrik', 115, 30000, 'Buat ngecek kabel putus', 'test pen.jpg'),
+(6, 'Sekop Pasir', 'Alat', 'Non-Elektrik', 89, 95000, 'Sekop pasir nih bos', 'Sekop Pasir.jpg'),
+(7, 'Tang Buaya', 'Alat', 'Non-Elektrik', 15, 133000, 'Tang Buaya nih bos', 'Tang Buaya.jpg'),
 (10, 'Kawat', 'Bahan', 'Bangunan', 12, 30000, 'Kawat', 'Kawat.jpg'),
-(11, 'Meteran', 'Alat', 'Non-Elektrik', 12, 32000, 'Meteran lllllll', 'Meteran.jpg'),
-(12, 'Arko', 'Alat', 'Non-Elektrik', 12, 659000, 'Gerobak Dorong untuk mengangkut pasir', 'Arko.jpg');
+(11, 'Meteran', 'Alat', 'Non-Elektrik', 7, 32000, 'Meteran lllllll', 'Meteran.jpg'),
+(12, 'Arko', 'Alat', 'Non-Elektrik', 6, 659000, 'Gerobak Dorong untuk mengangkut pasir', 'Arko.jpg');
 
 -- --------------------------------------------------------
 
@@ -118,8 +117,8 @@ CREATE TABLE `tbkeranjang` (
 --
 
 INSERT INTO `tbkeranjang` (`id`, `id_user`) VALUES
-(8, 1),
-(11, 9);
+(18, 1),
+(20, 9);
 
 -- --------------------------------------------------------
 
@@ -151,12 +150,12 @@ CREATE TABLE `tbtransaksi` (
 --
 
 INSERT INTO `tbtransaksi` (`id`, `id_user`, `tanggal`, `status`) VALUES
-(1, 1, '24/Mei/2023', 'SELESAI'),
-(2, 9, '24/Mei/2023', 'DIBATALKAN'),
-(6, 1, '24/Mei/2023', 'REQUEST BATAL'),
-(7, 1, '24/Mei/2023', 'DIBATALKAN'),
-(9, 9, '24/Mei/2023', 'SELESAI'),
-(10, 9, '24/Mei/2023', 'SELESAI');
+(11, 9, '24/Mei/2023', 'DIBATALKAN'),
+(14, 1, '24/Mei/2023', 'DIBATALKAN'),
+(15, 1, '24/Mei/2023', 'DIBATALKAN'),
+(16, 9, '24/Mei/2023', 'SELESAI'),
+(17, 1, '24/Mei/2023', 'SELESAI'),
+(19, 9, '24/Mei/2023', 'SELESAI');
 
 -- --------------------------------------------------------
 
@@ -169,26 +168,25 @@ CREATE TABLE `tbtransaksi_item` (
   `item` text NOT NULL,
   `qty` int(11) NOT NULL,
   `harga` int(11) NOT NULL,
-  `foto` text NOT NULL
+  `foto` text NOT NULL,
+  `idBarang` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `tbtransaksi_item`
 --
 
-INSERT INTO `tbtransaksi_item` (`idtransaksi`, `item`, `qty`, `harga`, `foto`) VALUES
-(1, 'Martil', 1, 75000, 'Martil.jpg'),
-(1, 'Paku', 14, 3000, 'Paku.jpg'),
-(6, 'Semen', 1, 170000, 'Semen.jpg'),
-(6, 'test pen', 1, 30000, 'test pen.jpg'),
-(7, 'Tang Buaya', 2, 133000, 'Tang Buaya.jpg'),
-(7, 'Kawat', 1, 30000, 'Kawat.jpg'),
-(2, 'Sekop Pasir', 1, 95000, 'Sekop Pasir.jpg'),
-(2, 'Kawat', 1, 30000, 'Kawat.jpg'),
-(9, 'Martil', 1, 75000, 'Martil.jpg'),
-(9, 'Arko', 1, 659000, 'Arko.jpg'),
-(10, 'Martil', 4, 75000, 'Martil.jpg'),
-(10, 'test pen', 4, 30000, 'test pen.jpg');
+INSERT INTO `tbtransaksi_item` (`idtransaksi`, `item`, `qty`, `harga`, `foto`, `idBarang`) VALUES
+(14, 'Paku', 3, 3000, 'Paku.jpg', 3),
+(14, 'Semen', 4, 170000, 'Semen.jpg', 4),
+(11, 'Martil', 5, 75000, 'Martil.jpg', 2),
+(15, 'Martil', 5, 75000, 'Martil.jpg', 2),
+(17, 'Martil', 5, 75000, 'Martil.jpg', 2),
+(17, 'Paku', 9, 3000, 'Paku.jpg', 3),
+(17, 'test pen', 8, 30000, 'test pen.jpg', 5),
+(16, 'Martil', 5, 75000, 'Martil.jpg', 2),
+(19, 'Sekop Pasir', 11, 95000, 'Sekop Pasir.jpg', 6),
+(19, 'Arko', 5, 659000, 'Arko.jpg', 12);
 
 --
 -- Indexes for dumped tables
@@ -248,7 +246,7 @@ ALTER TABLE `tbtransaksi_item`
 -- AUTO_INCREMENT for table `tbakun`
 --
 ALTER TABLE `tbakun`
-  MODIFY `id` bigint(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` bigint(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `tbbarang`
@@ -260,7 +258,7 @@ ALTER TABLE `tbbarang`
 -- AUTO_INCREMENT for table `tbkeranjang`
 --
 ALTER TABLE `tbkeranjang`
-  MODIFY `id` bigint(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` bigint(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- Constraints for dumped tables
