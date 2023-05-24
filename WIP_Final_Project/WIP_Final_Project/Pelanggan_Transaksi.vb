@@ -14,7 +14,7 @@ Public Class Pelanggan_Transaksi
 
     Private Function getRowCount() As Integer
         Call koneksi()
-        DA = New MySqlDataAdapter("select * from tbtransaksi join tbakun on tbtransaksi.id_user = tbakun.id " + statusBarang + "group by tbtransaksi.id", CONN)
+        DA = New MySqlDataAdapter("select * from tbtransaksi join tbakun on tbtransaksi.id_user = tbakun.id " + statusBarang + " and tbtransaksi.id_user = '" & Pelanggan_Main.Id & "'" + "group by tbtransaksi.id", CONN)
         DS = New DataSet
         DA.Fill(DS)
         Return DS.Tables(0).Rows.Count
@@ -24,7 +24,7 @@ Public Class Pelanggan_Transaksi
         Try
             cek()
             Call koneksi()
-            DA = New MySqlDataAdapter("select tbtransaksi.tanggal as 'tanggal', tbtransaksi.status as 'status', tbakun.nama as 'nama', tbakun.alamat as 'alamat', tbtransaksi.id as 'id', sum(tbtransaksi_item.qty * tbtransaksi_item.harga) as 'total', tbakun.foto as 'foto' from tbtransaksi join tbtransaksi_item join tbakun on tbtransaksi.id = tbtransaksi_item.idtransaksi and tbtransaksi.id_user = tbakun.id " + statusBarang + "group by tbtransaksi.id", CONN)
+            DA = New MySqlDataAdapter("select tbtransaksi.tanggal as 'tanggal', tbtransaksi.status as 'status', tbakun.nama as 'nama', tbakun.alamat as 'alamat', tbtransaksi.id as 'id', sum(tbtransaksi_item.qty * tbtransaksi_item.harga) as 'total', tbakun.foto as 'foto' from tbtransaksi join tbtransaksi_item join tbakun on tbtransaksi.id = tbtransaksi_item.idtransaksi and tbtransaksi.id_user = tbakun.id " + statusBarang + "and tbtransaksi.id_user = '" & Pelanggan_Main.Id & "'" + "group by tbtransaksi.id", CONN)
             DS = New DataSet
             DS.Clear()
             DA.Fill(DS, langkah, batasDataHalaman, "transaksi")

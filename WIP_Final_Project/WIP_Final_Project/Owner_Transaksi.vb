@@ -185,6 +185,7 @@ Public Class Owner_Transaksi
         End If
     End Sub
     Private Sub bntProses_Click(sender As Object, e As EventArgs) Handles bntProses.Click
+        pnPemasukan.Visible = False
         pnProses.BackColor = Color.White
         pnSelesai.BackColor = Color.DodgerBlue
         pnLainnya.BackColor = Color.DodgerBlue
@@ -194,15 +195,26 @@ Public Class Owner_Transaksi
     End Sub
 
     Private Sub btnSelesai_Click(sender As Object, e As EventArgs) Handles btnSelesai.Click
+        pnPemasukan.Visible = True
         pnProses.BackColor = Color.DodgerBlue
         pnSelesai.BackColor = Color.White
         pnLainnya.BackColor = Color.DodgerBlue
         statusBarang = "where tbtransaksi.status = 'SELESAI'"
+        Call koneksi()
+        CMD = New MySqlCommand("select sum(tbtransaksi_item.qty * tbtransaksi_item.harga) from tbtransaksi join tbtransaksi_item on tbtransaksi.id=tbtransaksi_item.idtransaksi where tbtransaksi.status = 'SELESAI'", CONN)
+        RD = CMD.ExecuteReader()
+        RD.Read()
+        If RD.IsDBNull(0) Then
+            lbPemasukan.Text = 0
+        Else
+            lbPemasukan.Text = RD.GetString(0)
+        End If
         getRowCount()
         readDB()
     End Sub
 
     Private Sub btnLainnya_Click(sender As Object, e As EventArgs) Handles btnLainnya.Click
+        pnPemasukan.Visible = False
         pnProses.BackColor = Color.DodgerBlue
         pnSelesai.BackColor = Color.DodgerBlue
         pnLainnya.BackColor = Color.White

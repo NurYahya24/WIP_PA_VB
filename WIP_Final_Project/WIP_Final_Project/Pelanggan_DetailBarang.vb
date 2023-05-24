@@ -42,6 +42,7 @@ Public Class Pelanggan_DetailBarang
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Pelanggan_Main.btnBarang.PerformClick()
+        Owner_Main.btnBarang.PerformClick()
     End Sub
 
 

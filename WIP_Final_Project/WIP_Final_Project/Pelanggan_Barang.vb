@@ -12,7 +12,7 @@ Public Class Pelanggan_Barang
 
     Private Function getRowCount() As Integer
         Call koneksi()
-        DA = New MySqlDataAdapter("select * from tbbarang", CONN)
+        DA = New MySqlDataAdapter("select * from tbbarang where stok > 0", CONN)
         DS = New DataSet
         DA.Fill(DS)
         Return DS.Tables(0).Rows.Count
@@ -22,7 +22,7 @@ Public Class Pelanggan_Barang
         Try
             cek()
             Call koneksi()
-            DA = New MySqlDataAdapter("select * from tbbarang", CONN)
+            DA = New MySqlDataAdapter("select * from tbbarang where stok > 0", CONN)
             DS = New DataSet
             DS.Clear()
             DA.Fill(DS, dataAwal, batasDataHalaman, "barang")

@@ -62,6 +62,8 @@ Public Class LogReg
         If pnBrand.Location.X > 0 Then
             pnRegis.Hide()
         End If
+        txtLogPass.UseSystemPasswordChar = True
+        txtRegPass.UseSystemPasswordChar = True
     End Sub
 
     Private Sub btnMasuk_Click(sender As Object, e As EventArgs) Handles btnMasuk.Click
@@ -108,4 +110,19 @@ Public Class LogReg
         End If
     End Sub
 
+    Private Sub seePassLog_CheckedChanged(sender As Object, e As EventArgs) Handles seePassLog.CheckedChanged
+        If seePassLog.Checked Then
+            txtLogPass.UseSystemPasswordChar = False
+        Else
+            txtLogPass.UseSystemPasswordChar = True
+        End If
+    End Sub
+
+    Private Sub seePassReg_CheckedChanged(sender As Object, e As EventArgs) Handles seePassReg.CheckedChanged
+        If seePassReg.Checked Then
+            txtRegPass.UseSystemPasswordChar = False
+        Else
+            txtRegPass.UseSystemPasswordChar = True
+        End If
+    End Sub
 End Class

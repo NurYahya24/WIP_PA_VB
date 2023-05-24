@@ -44,6 +44,7 @@ Public Class Pelanggan_Main
             .BringToFront()
             .Show()
         End With
+        Pelanggan_Barang.readDB()
         Button1.Visible = True
     End Sub
 

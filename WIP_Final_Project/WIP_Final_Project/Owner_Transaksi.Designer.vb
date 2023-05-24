@@ -96,6 +96,11 @@ Partial Class Owner_Transaksi
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Panel14 = New System.Windows.Forms.Panel()
         Me.transaksi2 = New System.Windows.Forms.Panel()
+        Me.pnPemasukan = New System.Windows.Forms.Panel()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.lbPemasukan = New System.Windows.Forms.Label()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.header2.SuspendLayout()
         Me.Panel19.SuspendLayout()
         Me.Panel21.SuspendLayout()
@@ -120,6 +125,7 @@ Partial Class Owner_Transaksi
         Me.Panel5.SuspendLayout()
         Me.Panel14.SuspendLayout()
         Me.transaksi2.SuspendLayout()
+        Me.pnPemasukan.SuspendLayout()
         Me.SuspendLayout()
         '
         'header2
@@ -878,7 +884,7 @@ Partial Class Owner_Transaksi
         Me.btnDown.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.btnDown.FlatAppearance.BorderSize = 0
         Me.btnDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnDown.Location = New System.Drawing.Point(0, 451)
+        Me.btnDown.Location = New System.Drawing.Point(0, 413)
         Me.btnDown.Name = "btnDown"
         Me.btnDown.Size = New System.Drawing.Size(74, 72)
         Me.btnDown.TabIndex = 3
@@ -904,7 +910,7 @@ Partial Class Owner_Transaksi
         Me.Panel5.Dock = System.Windows.Forms.DockStyle.Right
         Me.Panel5.Location = New System.Drawing.Point(526, 41)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(74, 523)
+        Me.Panel5.Size = New System.Drawing.Size(74, 485)
         Me.Panel5.TabIndex = 13
         '
         'Panel14
@@ -930,6 +936,60 @@ Partial Class Owner_Transaksi
         Me.transaksi2.Size = New System.Drawing.Size(497, 100)
         Me.transaksi2.TabIndex = 14
         '
+        'pnPemasukan
+        '
+        Me.pnPemasukan.BackColor = System.Drawing.Color.White
+        Me.pnPemasukan.Controls.Add(Me.Label1)
+        Me.pnPemasukan.Controls.Add(Me.Label2)
+        Me.pnPemasukan.Controls.Add(Me.lbPemasukan)
+        Me.pnPemasukan.Controls.Add(Me.Panel4)
+        Me.pnPemasukan.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.pnPemasukan.Location = New System.Drawing.Point(0, 526)
+        Me.pnPemasukan.Name = "pnPemasukan"
+        Me.pnPemasukan.Size = New System.Drawing.Size(600, 38)
+        Me.pnPemasukan.TabIndex = 17
+        '
+        'Label2
+        '
+        Me.Label2.Dock = System.Windows.Forms.DockStyle.Right
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(316, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(40, 38)
+        Me.Label2.TabIndex = 2
+        Me.Label2.Text = "Rp."
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lbPemasukan
+        '
+        Me.lbPemasukan.Dock = System.Windows.Forms.DockStyle.Right
+        Me.lbPemasukan.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbPemasukan.Location = New System.Drawing.Point(356, 0)
+        Me.lbPemasukan.Name = "lbPemasukan"
+        Me.lbPemasukan.Size = New System.Drawing.Size(196, 38)
+        Me.lbPemasukan.TabIndex = 1
+        Me.lbPemasukan.Text = "Pemasukan"
+        Me.lbPemasukan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Panel4
+        '
+        Me.Panel4.Dock = System.Windows.Forms.DockStyle.Right
+        Me.Panel4.Location = New System.Drawing.Point(552, 0)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(48, 38)
+        Me.Panel4.TabIndex = 0
+        '
+        'Label1
+        '
+        Me.Label1.Dock = System.Windows.Forms.DockStyle.Right
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(226, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(90, 38)
+        Me.Label1.TabIndex = 3
+        Me.Label1.Text = "Pemasukan : "
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
         'Owner_Transaksi
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -941,6 +1001,7 @@ Partial Class Owner_Transaksi
         Me.Controls.Add(Me.transaksi4)
         Me.Controls.Add(Me.transaksi1)
         Me.Controls.Add(Me.Panel5)
+        Me.Controls.Add(Me.pnPemasukan)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.transaksi2)
@@ -979,6 +1040,7 @@ Partial Class Owner_Transaksi
         Me.Panel14.ResumeLayout(False)
         Me.Panel14.PerformLayout()
         Me.transaksi2.ResumeLayout(False)
+        Me.pnPemasukan.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1057,4 +1119,9 @@ Partial Class Owner_Transaksi
     Friend WithEvents Panel5 As Panel
     Friend WithEvents Panel14 As Panel
     Friend WithEvents transaksi2 As Panel
+    Friend WithEvents pnPemasukan As Panel
+    Friend WithEvents Label2 As Label
+    Friend WithEvents lbPemasukan As Label
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents Label1 As Label
 End Class

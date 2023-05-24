@@ -53,10 +53,9 @@ Partial Class Pelanggan_DetailBarang
         Me.Label1.AutoSize = True
         Me.Label1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(0, 87)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(0, 70)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(43, 25)
+        Me.Label1.Size = New System.Drawing.Size(34, 20)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Rp. "
         '
@@ -65,10 +64,9 @@ Partial Class Pelanggan_DetailBarang
         Me.lbNama.AutoSize = True
         Me.lbNama.Dock = System.Windows.Forms.DockStyle.Top
         Me.lbNama.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbNama.Location = New System.Drawing.Point(0, 32)
-        Me.lbNama.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lbNama.Location = New System.Drawing.Point(0, 26)
         Me.lbNama.Name = "lbNama"
-        Me.lbNama.Size = New System.Drawing.Size(130, 25)
+        Me.lbNama.Size = New System.Drawing.Size(102, 20)
         Me.lbNama.TabIndex = 5
         Me.lbNama.Text = "Nama_Barang"
         '
@@ -76,10 +74,9 @@ Partial Class Pelanggan_DetailBarang
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(48, 438)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(36, 356)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(88, 25)
+        Me.Label3.Size = New System.Drawing.Size(69, 20)
         Me.Label3.TabIndex = 8
         Me.Label3.Text = "Deskripsi"
         '
@@ -87,22 +84,20 @@ Partial Class Pelanggan_DetailBarang
         '
         Me.txtDesk.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtDesk.Enabled = False
-        Me.txtDesk.Location = New System.Drawing.Point(53, 481)
-        Me.txtDesk.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtDesk.Location = New System.Drawing.Point(40, 391)
         Me.txtDesk.Multiline = True
         Me.txtDesk.Name = "txtDesk"
         Me.txtDesk.ReadOnly = True
-        Me.txtDesk.Size = New System.Drawing.Size(677, 154)
+        Me.txtDesk.Size = New System.Drawing.Size(509, 126)
         Me.txtDesk.TabIndex = 9
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(49, 294)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Location = New System.Drawing.Point(37, 239)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(42, 23)
+        Me.Label4.Size = New System.Drawing.Size(33, 17)
         Me.Label4.TabIndex = 10
         Me.Label4.Text = "Tipe"
         '
@@ -110,10 +105,9 @@ Partial Class Pelanggan_DetailBarang
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(49, 338)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Location = New System.Drawing.Point(37, 275)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(46, 23)
+        Me.Label5.Size = New System.Drawing.Size(36, 17)
         Me.Label5.TabIndex = 11
         Me.Label5.Text = "Jenis"
         '
@@ -121,19 +115,17 @@ Partial Class Pelanggan_DetailBarang
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(49, 380)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Location = New System.Drawing.Point(37, 309)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(42, 23)
+        Me.Label6.Size = New System.Drawing.Size(33, 17)
         Me.Label6.TabIndex = 12
         Me.Label6.Text = "Stok"
         '
         'pbBarang
         '
-        Me.pbBarang.Location = New System.Drawing.Point(53, 82)
-        Me.pbBarang.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.pbBarang.Location = New System.Drawing.Point(40, 67)
         Me.pbBarang.Name = "pbBarang"
-        Me.pbBarang.Size = New System.Drawing.Size(207, 191)
+        Me.pbBarang.Size = New System.Drawing.Size(155, 155)
         Me.pbBarang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.pbBarang.TabIndex = 0
         Me.pbBarang.TabStop = False
@@ -142,10 +134,9 @@ Partial Class Pelanggan_DetailBarang
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(125, 294)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label7.Location = New System.Drawing.Point(94, 239)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(14, 23)
+        Me.Label7.Size = New System.Drawing.Size(11, 17)
         Me.Label7.TabIndex = 13
         Me.Label7.Text = ":"
         '
@@ -153,10 +144,9 @@ Partial Class Pelanggan_DetailBarang
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(125, 338)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label8.Location = New System.Drawing.Point(94, 275)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(14, 23)
+        Me.Label8.Size = New System.Drawing.Size(11, 17)
         Me.Label8.TabIndex = 14
         Me.Label8.Text = ":"
         '
@@ -164,10 +154,9 @@ Partial Class Pelanggan_DetailBarang
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(125, 380)
-        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label9.Location = New System.Drawing.Point(94, 309)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(14, 23)
+        Me.Label9.Size = New System.Drawing.Size(11, 17)
         Me.Label9.TabIndex = 15
         Me.Label9.Text = ":"
         '
@@ -175,10 +164,9 @@ Partial Class Pelanggan_DetailBarang
         '
         Me.lbTipe.AutoSize = True
         Me.lbTipe.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbTipe.Location = New System.Drawing.Point(148, 294)
-        Me.lbTipe.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lbTipe.Location = New System.Drawing.Point(111, 239)
         Me.lbTipe.Name = "lbTipe"
-        Me.lbTipe.Size = New System.Drawing.Size(56, 23)
+        Me.lbTipe.Size = New System.Drawing.Size(44, 17)
         Me.lbTipe.TabIndex = 16
         Me.lbTipe.Text = "lbTipe"
         '
@@ -186,10 +174,9 @@ Partial Class Pelanggan_DetailBarang
         '
         Me.lbJenis.AutoSize = True
         Me.lbJenis.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbJenis.Location = New System.Drawing.Point(148, 338)
-        Me.lbJenis.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lbJenis.Location = New System.Drawing.Point(111, 275)
         Me.lbJenis.Name = "lbJenis"
-        Me.lbJenis.Size = New System.Drawing.Size(60, 23)
+        Me.lbJenis.Size = New System.Drawing.Size(47, 17)
         Me.lbJenis.TabIndex = 17
         Me.lbJenis.Text = "lbJenis"
         '
@@ -197,10 +184,9 @@ Partial Class Pelanggan_DetailBarang
         '
         Me.lbStok.AutoSize = True
         Me.lbStok.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbStok.Location = New System.Drawing.Point(148, 380)
-        Me.lbStok.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lbStok.Location = New System.Drawing.Point(111, 309)
         Me.lbStok.Name = "lbStok"
-        Me.lbStok.Size = New System.Drawing.Size(56, 23)
+        Me.lbStok.Size = New System.Drawing.Size(44, 17)
         Me.lbStok.TabIndex = 18
         Me.lbStok.Text = "lbStok"
         '
@@ -211,10 +197,9 @@ Partial Class Pelanggan_DetailBarang
         Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Controls.Add(Me.lbNama)
         Me.Panel1.Controls.Add(Me.Panel3)
-        Me.Panel1.Location = New System.Drawing.Point(293, 82)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel1.Location = New System.Drawing.Point(220, 67)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(451, 129)
+        Me.Panel1.Size = New System.Drawing.Size(338, 105)
         Me.Panel1.TabIndex = 19
         '
         'lbHarga
@@ -222,29 +207,26 @@ Partial Class Pelanggan_DetailBarang
         Me.lbHarga.AutoSize = True
         Me.lbHarga.Dock = System.Windows.Forms.DockStyle.Left
         Me.lbHarga.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbHarga.Location = New System.Drawing.Point(43, 87)
-        Me.lbHarga.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lbHarga.Location = New System.Drawing.Point(34, 70)
         Me.lbHarga.Name = "lbHarga"
-        Me.lbHarga.Size = New System.Drawing.Size(131, 25)
+        Me.lbHarga.Size = New System.Drawing.Size(103, 20)
         Me.lbHarga.TabIndex = 8
         Me.lbHarga.Text = "Harga_Barang"
         '
         'Panel2
         '
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel2.Location = New System.Drawing.Point(0, 57)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel2.Location = New System.Drawing.Point(0, 46)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(451, 30)
+        Me.Panel2.Size = New System.Drawing.Size(338, 24)
         Me.Panel2.TabIndex = 6
         '
         'Panel3
         '
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel3.Location = New System.Drawing.Point(0, 0)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(451, 32)
+        Me.Panel3.Size = New System.Drawing.Size(338, 26)
         Me.Panel3.TabIndex = 7
         '
         'btnAdd
@@ -255,11 +237,10 @@ Partial Class Pelanggan_DetailBarang
         Me.btnAdd.ForeColor = System.Drawing.Color.DodgerBlue
         Me.btnAdd.Image = CType(resources.GetObject("btnAdd.Image"), System.Drawing.Image)
         Me.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnAdd.Location = New System.Drawing.Point(293, 226)
-        Me.btnAdd.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnAdd.Location = New System.Drawing.Point(220, 184)
         Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Padding = New System.Windows.Forms.Padding(0, 0, 13, 0)
-        Me.btnAdd.Size = New System.Drawing.Size(168, 47)
+        Me.btnAdd.Padding = New System.Windows.Forms.Padding(0, 0, 10, 0)
+        Me.btnAdd.Size = New System.Drawing.Size(126, 38)
         Me.btnAdd.TabIndex = 20
         Me.btnAdd.Text = "Tambahkan"
         Me.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -274,10 +255,9 @@ Partial Class Pelanggan_DetailBarang
         Me.btnDel.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDel.ForeColor = System.Drawing.Color.White
         Me.btnDel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnDel.Location = New System.Drawing.Point(469, 226)
-        Me.btnDel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnDel.Location = New System.Drawing.Point(352, 184)
         Me.btnDel.Name = "btnDel"
-        Me.btnDel.Size = New System.Drawing.Size(176, 47)
+        Me.btnDel.Size = New System.Drawing.Size(132, 38)
         Me.btnDel.TabIndex = 21
         Me.btnDel.Text = "Hapus Dari Keranjang"
         Me.btnDel.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
@@ -290,19 +270,18 @@ Partial Class Pelanggan_DetailBarang
         Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button1.FlatAppearance.BorderSize = 0
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Location = New System.Drawing.Point(16, 15)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button1.Location = New System.Drawing.Point(12, 12)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(57, 46)
+        Me.Button1.Size = New System.Drawing.Size(43, 37)
         Me.Button1.TabIndex = 22
         Me.Button1.UseVisualStyleBackColor = False
         '
         'Pelanggan_DetailBarang
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(779, 646)
+        Me.ClientSize = New System.Drawing.Size(584, 525)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btnDel)
         Me.Controls.Add(Me.btnAdd)
@@ -320,7 +299,6 @@ Partial Class Pelanggan_DetailBarang
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.pbBarang)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "Pelanggan_DetailBarang"
         Me.Text = "Pelanggan_DetailBarang"
         CType(Me.pbBarang, System.ComponentModel.ISupportInitialize).EndInit()

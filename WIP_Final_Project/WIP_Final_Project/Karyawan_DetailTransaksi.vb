@@ -185,6 +185,18 @@ Public Class Karyawan_DetailTransaksi
 
     Private Sub btnAcc_Click(sender As Object, e As EventArgs) Handles btnAcc.Click
         prosesPesanan("DIBATALKAN")
+        Call koneksi()
+        DA = New MySqlDataAdapter("select idBarang, qty from tbtransaksi_item where idtransaksi='" & idTransaksi & "' ", CONN)
+        DS = New DataSet
+        DA.Fill(DS, "balikinStok")
+        dgvBalikinStok.DataSource = DS.Tables(0)
+        For Each row As DataGridViewRow In dgvBalikinStok.Rows
+            Dim idBarangQ As Integer = row.Cells(0).Value.ToString
+            Dim stokQ As Integer = row.Cells(1).Value.ToString
+            CMD = New MySqlCommand("update tbbarang set stok = stok + " & stokQ & " where id='" & idBarangQ & "'", CONN)
+            CMD.ExecuteNonQuery()
+        Next
+        Karyawan_barang.readDB()
     End Sub
 
     Private Sub btnDec_Click(sender As Object, e As EventArgs) Handles btnDec.Click

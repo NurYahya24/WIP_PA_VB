@@ -93,6 +93,7 @@ Partial Class Karyawan_DetailTransaksi
         Me.lbNamaUser = New System.Windows.Forms.Label()
         Me.lbAlamat = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.dgvBalikinStok = New System.Windows.Forms.DataGridView()
         Me.Panel13.SuspendLayout()
         Me.Panel22.SuspendLayout()
         Me.Panel21.SuspendLayout()
@@ -118,6 +119,7 @@ Partial Class Karyawan_DetailTransaksi
         Me.Panel15.SuspendLayout()
         CType(Me.pbProfil, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
+        CType(Me.dgvBalikinStok, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lbItem4
@@ -849,11 +851,22 @@ Partial Class Karyawan_DetailTransaksi
         Me.Panel1.Size = New System.Drawing.Size(200, 100)
         Me.Panel1.TabIndex = 29
         '
+        'dgvBalikinStok
+        '
+        Me.dgvBalikinStok.AllowUserToAddRows = False
+        Me.dgvBalikinStok.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvBalikinStok.Location = New System.Drawing.Point(487, 69)
+        Me.dgvBalikinStok.Name = "dgvBalikinStok"
+        Me.dgvBalikinStok.Size = New System.Drawing.Size(42, 39)
+        Me.dgvBalikinStok.TabIndex = 30
+        Me.dgvBalikinStok.Visible = False
+        '
         'Karyawan_DetailTransaksi
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(600, 564)
+        Me.Controls.Add(Me.dgvBalikinStok)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.pbProfil)
         Me.Controls.Add(Me.Item4)
@@ -899,6 +912,7 @@ Partial Class Karyawan_DetailTransaksi
         Me.Panel15.ResumeLayout(False)
         CType(Me.pbProfil, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
+        CType(Me.dgvBalikinStok, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -974,4 +988,5 @@ Partial Class Karyawan_DetailTransaksi
     Friend WithEvents Panel1 As Panel
     Friend WithEvents btnAcc As Button
     Friend WithEvents btnDec As Button
+    Friend WithEvents dgvBalikinStok As DataGridView
 End Class

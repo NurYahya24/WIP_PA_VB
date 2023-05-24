@@ -30,7 +30,7 @@ Public Class Owner_Karyawan
             MessageBox.Show("Data Belum Lengkap")
         Else
             Call koneksi()
-            CMD = New MySqlCommand("select email from tbakun where id = '" & txtRegMail.Text & "'", CONN)
+            CMD = New MySqlCommand("select email from tbakun where email = '" & txtRegMail.Text & "'", CONN)
             RD = CMD.ExecuteReader()
             RD.Read()
             If RD.HasRows Then

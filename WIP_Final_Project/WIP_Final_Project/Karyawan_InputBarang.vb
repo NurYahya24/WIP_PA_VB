@@ -80,4 +80,11 @@ Public Class Karyawan_InputBarang
         pbBarang.ImageLocation = BukaFile.FileName
     End Sub
 
+    Private Sub btnHapus_Click(sender As Object, e As EventArgs) Handles btnHapus.Click
+        Call koneksi()
+        CMD = New MySqlCommand("delete from tbkeranjang_item where idbarang='" & idBarang & "';delete from tbbarang where id='" & idBarang & "'", CONN)
+        CMD.ExecuteNonQuery()
+        Karyawan_Main.btnBarang.PerformClick()
+        Karyawan_barang.readDB()
+    End Sub
 End Class

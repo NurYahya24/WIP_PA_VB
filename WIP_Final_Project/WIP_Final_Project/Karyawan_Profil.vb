@@ -45,4 +45,9 @@ Public Class Karyawan_Profil
         End If
     End Sub
 
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        GantiPassword.idUser = Karyawan_Main.Id
+        GantiPassword.ShowDialog()
+
+    End Sub
 End Class

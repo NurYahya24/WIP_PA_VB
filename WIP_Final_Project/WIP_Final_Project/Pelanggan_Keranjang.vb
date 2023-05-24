@@ -61,6 +61,15 @@ Public Class Pelanggan_Keranjang
         readDB()
     End Sub
 
+    Function maxValue(ByVal addValue As Integer) As Integer
+        Call koneksi()
+        CMD = New MySqlCommand("select stok from tbbarang where id='" & addValue & "'", CONN)
+        RD = CMD.ExecuteReader
+        RD.Read()
+        Dim stok As Integer = RD.GetString(0)
+        Return stok
+    End Function
+
     Sub readDB()
         Try
             cek()
@@ -189,7 +198,7 @@ Public Class Pelanggan_Keranjang
 
     Sub cart2Checkout()
         Call koneksi()
-        DA = New MySqlDataAdapter("select tbbarang.nama as 'item', tbkeranjang_item.qty as 'qty', tbbarang.harga as 'harga', tbbarang.foto as 'foto' from tbkeranjang join tbkeranjang_item join tbakun join tbbarang on tbkeranjang.id=tbkeranjang_item.idkeranjang and tbkeranjang.id_user=tbakun.id and tbkeranjang_item.idbarang=tbbarang.id where tbkeranjang.id = '" & Pelanggan_Main.idCart & "'", CONN)
+        DA = New MySqlDataAdapter("select tbbarang.nama as 'item', tbkeranjang_item.qty as 'qty', tbbarang.harga as 'harga', tbbarang.foto as 'foto', tbbarang.id as 'idBarang' from tbkeranjang join tbkeranjang_item join tbakun join tbbarang on tbkeranjang.id=tbkeranjang_item.idkeranjang and tbkeranjang.id_user=tbakun.id and tbkeranjang_item.idbarang=tbbarang.id where tbkeranjang.id = '" & Pelanggan_Main.idCart & "'", CONN)
         DS = New DataSet
         DS.Clear()
         DA.Fill(DS, "CartToCheckout")
@@ -206,11 +215,15 @@ Public Class Pelanggan_Keranjang
             Dim qtyBarang As Integer = row.Cells(1).Value
             Dim hargaBarang As Integer = row.Cells(2).Value
             Dim fotoBarang As String = row.Cells(3).Value
-            CMD = New MySqlCommand("insert into tbtransaksi_item(idtransaksi, item, qty, harga, foto) values('" & Pelanggan_Main.idCart & "', '" & itemBarang & "', '" & qtyBarang & "', '" & hargaBarang & "', '" & fotoBarang & "')", CONN)
+            Dim idBarangQ As Integer = row.Cells(4).Value
+            CMD = New MySqlCommand("insert into tbtransaksi_item(idtransaksi, item, qty, harga, foto, idBarang) values('" & Pelanggan_Main.idCart & "', '" & itemBarang & "', '" & qtyBarang & "', '" & hargaBarang & "', '" & fotoBarang & "', '" & idBarangQ & "')", CONN)
+            CMD.ExecuteNonQuery()
+            CMD = New MySqlCommand("update tbbarang set stok = stok - " & qtyBarang & " where id='" & idBarangQ & "'", CONN)
             CMD.ExecuteNonQuery()
         Next
         CMD = New MySqlCommand("delete from tbkeranjang_item where idkeranjang='" & Pelanggan_Main.idCart & "';delete from tbkeranjang where id = '" & Pelanggan_Main.idCart & "'", CONN)
         CMD.ExecuteNonQuery()
+        Pelanggan_Barang.readDB()
     End Sub
 
     Private Sub btnUp_Click(sender As Object, e As EventArgs) Handles btnUp.Click
@@ -226,23 +239,44 @@ Public Class Pelanggan_Keranjang
     End Sub
 
     Private Sub btnAdd1_Click(sender As Object, e As EventArgs) Handles btnAdd1.Click
-        addQty(dgvKeranjang.Rows(0).Cells(0).Value.ToString)
+        Dim parameterQ As Integer = dgvKeranjang.Rows(0).Cells(0).Value.ToString
+        addQty(parameterQ)
+        If lbQty1.Text = maxValue(parameterQ) Then
+            btnAdd1.Enabled = False
+        End If
+
     End Sub
 
     Private Sub btnAdd2_Click(sender As Object, e As EventArgs) Handles btnAdd2.Click
-        addQty(dgvKeranjang.Rows(1).Cells(0).Value.ToString)
+        Dim parameterQ As Integer = dgvKeranjang.Rows(1).Cells(0).Value.ToString
+        addQty(parameterQ)
+        If lbQty2.Text = maxValue(parameterQ) Then
+            btnAdd2.Enabled = False
+        End If
     End Sub
 
     Private Sub btnAdd3_Click(sender As Object, e As EventArgs) Handles btnAdd3.Click
-        addQty(dgvKeranjang.Rows(2).Cells(0).Value.ToString)
+        Dim parameterQ As Integer = dgvKeranjang.Rows(2).Cells(0).Value.ToString
+        addQty(parameterQ)
+        If lbQty3.Text = maxValue(parameterQ) Then
+            btnAdd3.Enabled = False
+        End If
     End Sub
 
     Private Sub btnAdd4_Click(sender As Object, e As EventArgs) Handles btnAdd4.Click
-        addQty(dgvKeranjang.Rows(3).Cells(0).Value.ToString)
+        Dim parameterQ As Integer = dgvKeranjang.Rows(3).Cells(0).Value.ToString
+        addQty(parameterQ)
+        If lbQty4.Text = maxValue(parameterQ) Then
+            btnAdd4.Enabled = False
+        End If
     End Sub
 
     Private Sub btnAdd5_Click(sender As Object, e As EventArgs) Handles btnAdd5.Click
-        addQty(dgvKeranjang.Rows(4).Cells(0).Value.ToString)
+        Dim parameterQ As Integer = dgvKeranjang.Rows(4).Cells(0).Value.ToString
+        addQty(parameterQ)
+        If lbQty5.Text = maxValue(parameterQ) Then
+            btnAdd5.Enabled = False
+        End If
     End Sub
 
     Private Sub btnMin1_Click(sender As Object, e As EventArgs) Handles btnMin1.Click
@@ -255,6 +289,7 @@ Public Class Pelanggan_Keranjang
         Else
             minQty(dgvKeranjang.Rows(0).Cells(0).Value.ToString)
         End If
+        btnAdd1.Enabled = True
     End Sub
 
     Private Sub btnMin2_Click(sender As Object, e As EventArgs) Handles btnMin2.Click
@@ -267,6 +302,7 @@ Public Class Pelanggan_Keranjang
         Else
             minQty(dgvKeranjang.Rows(1).Cells(0).Value.ToString)
         End If
+        btnAdd2.Enabled = True
     End Sub
 
     Private Sub btnMin3_Click(sender As Object, e As EventArgs) Handles btnMin3.Click
@@ -279,6 +315,7 @@ Public Class Pelanggan_Keranjang
         Else
             minQty(dgvKeranjang.Rows(2).Cells(0).Value.ToString)
         End If
+        btnAdd3.Enabled = True
     End Sub
 
     Private Sub btnMin4_Click(sender As Object, e As EventArgs) Handles btnMin4.Click
@@ -291,6 +328,7 @@ Public Class Pelanggan_Keranjang
         Else
             minQty(dgvKeranjang.Rows(3).Cells(0).Value.ToString)
         End If
+        btnAdd4.Enabled = True
     End Sub
 
     Private Sub btnMin5_Click(sender As Object, e As EventArgs) Handles btnMin5.Click
@@ -303,26 +341,32 @@ Public Class Pelanggan_Keranjang
         Else
             minQty(dgvKeranjang.Rows(4).Cells(0).Value.ToString)
         End If
+        btnAdd5.Enabled = True
     End Sub
 
     Private Sub btnRm1_Click(sender As Object, e As EventArgs) Handles btnRm1.Click
         cancelItem(dgvKeranjang.Rows(0).Cells(0).Value.ToString)
+        btnAdd1.Enabled = True
     End Sub
 
     Private Sub btnRm2_Click(sender As Object, e As EventArgs) Handles btnRm2.Click
         cancelItem(dgvKeranjang.Rows(1).Cells(0).Value.ToString)
+        btnAdd2.Enabled = True
     End Sub
 
     Private Sub btnRm3_Click(sender As Object, e As EventArgs) Handles btnRm3.Click
         cancelItem(dgvKeranjang.Rows(2).Cells(0).Value.ToString)
+        btnAdd3.Enabled = True
     End Sub
 
     Private Sub btnRm4_Click(sender As Object, e As EventArgs) Handles btnRm4.Click
         cancelItem(dgvKeranjang.Rows(3).Cells(0).Value.ToString)
+        btnAdd4.Enabled = True
     End Sub
 
     Private Sub btnRm5_Click(sender As Object, e As EventArgs) Handles btnRm5.Click
         cancelItem(dgvKeranjang.Rows(4).Cells(0).Value.ToString)
+        btnAdd5.Enabled = True
     End Sub
 
     Private Sub btnCheckOut_Click(sender As Object, e As EventArgs) Handles btnCheckOut.Click
