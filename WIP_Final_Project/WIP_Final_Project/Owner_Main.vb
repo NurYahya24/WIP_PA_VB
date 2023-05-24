@@ -34,6 +34,13 @@ Public Class Owner_Main
         btnBarang.BackColor = Color.Transparent
         btnTransaksi.BackColor = Color.Gray
         btnProfil.BackColor = Color.Transparent
+        With Owner_Transaksi
+            .TopLevel = False
+            pnCanvas.Controls.Add(Owner_Transaksi)
+            .BringToFront()
+            .Show()
+        End With
+        Owner_Transaksi.bntProses.PerformClick()
 
     End Sub
 

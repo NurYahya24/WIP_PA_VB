@@ -82,6 +82,12 @@
     <Compile Include="Karyawan_barang.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Karyawan_DetailTransaksi.Designer.vb">
+      <DependentUpon>Karyawan_DetailTransaksi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Karyawan_DetailTransaksi.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Karyawan_InputBarang.Designer.vb">
       <DependentUpon>Karyawan_InputBarang.vb</DependentUpon>
     </Compile>
@@ -98,6 +104,12 @@
       <DependentUpon>Karyawan_Profil.vb</DependentUpon>
     </Compile>
     <Compile Include="Karyawan_Profil.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Karyawan_transaksi.Designer.vb">
+      <DependentUpon>Karyawan_transaksi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Karyawan_transaksi.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LogReg.Designer.vb">
@@ -125,10 +137,22 @@
     <Compile Include="Owner_Main.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Owner_Transaksi.Designer.vb">
+      <DependentUpon>Owner_Transaksi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Owner_Transaksi.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Pelanggan_DetailBarang.Designer.vb">
       <DependentUpon>Pelanggan_DetailBarang.vb</DependentUpon>
     </Compile>
     <Compile Include="Pelanggan_DetailBarang.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pelanggan_DetailTransaksi.Designer.vb">
+      <DependentUpon>Pelanggan_DetailTransaksi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pelanggan_DetailTransaksi.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Pelanggan_Keranjang.Designer.vb">
@@ -153,6 +177,12 @@
       <DependentUpon>Pelanggan_Barang.vb</DependentUpon>
     </Compile>
     <Compile Include="Pelanggan_Barang.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pelanggan_Transaksi.Designer.vb">
+      <DependentUpon>Pelanggan_Transaksi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pelanggan_Transaksi.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Splash_screen.vb">
@@ -182,6 +212,9 @@
     <EmbeddedResource Include="Karyawan_barang.resx">
       <DependentUpon>Karyawan_barang.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Karyawan_DetailTransaksi.resx">
+      <DependentUpon>Karyawan_DetailTransaksi.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Karyawan_InputBarang.resx">
       <DependentUpon>Karyawan_InputBarang.vb</DependentUpon>
     </EmbeddedResource>
@@ -190,6 +223,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Karyawan_Profil.resx">
       <DependentUpon>Karyawan_Profil.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Karyawan_transaksi.resx">
+      <DependentUpon>Karyawan_transaksi.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LogReg.resx">
       <DependentUpon>LogReg.vb</DependentUpon>
@@ -209,8 +245,14 @@
     <EmbeddedResource Include="Owner_Main.resx">
       <DependentUpon>Owner_Main.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Owner_Transaksi.resx">
+      <DependentUpon>Owner_Transaksi.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pelanggan_DetailBarang.resx">
       <DependentUpon>Pelanggan_DetailBarang.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pelanggan_DetailTransaksi.resx">
+      <DependentUpon>Pelanggan_DetailTransaksi.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pelanggan_Keranjang.resx">
       <DependentUpon>Pelanggan_Keranjang.vb</DependentUpon>
@@ -223,6 +265,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pelanggan_Barang.resx">
       <DependentUpon>Pelanggan_Barang.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pelanggan_Transaksi.resx">
+      <DependentUpon>Pelanggan_Transaksi.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Splash_screen.resx">
       <DependentUpon>Splash_screen.vb</DependentUpon>

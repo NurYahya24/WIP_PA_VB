@@ -41,7 +41,6 @@ Public Class Pelanggan_Keranjang
         Call koneksi()
         CMD = New MySqlCommand(tambah, CONN)
         CMD.ExecuteNonQuery()
-        refreshPage()
         readDB()
     End Sub
 
@@ -50,7 +49,6 @@ Public Class Pelanggan_Keranjang
         Call koneksi()
         CMD = New MySqlCommand(kurang, CONN)
         CMD.ExecuteNonQuery()
-        refreshPage()
         readDB()
     End Sub
 
@@ -189,6 +187,32 @@ Public Class Pelanggan_Keranjang
         End If
     End Sub
 
+    Sub cart2Checkout()
+        Call koneksi()
+        DA = New MySqlDataAdapter("select tbbarang.nama as 'item', tbkeranjang_item.qty as 'qty', tbbarang.harga as 'harga', tbbarang.foto as 'foto' from tbkeranjang join tbkeranjang_item join tbakun join tbbarang on tbkeranjang.id=tbkeranjang_item.idkeranjang and tbkeranjang.id_user=tbakun.id and tbkeranjang_item.idbarang=tbbarang.id where tbkeranjang.id = '" & Pelanggan_Main.idCart & "'", CONN)
+        DS = New DataSet
+        DS.Clear()
+        DA.Fill(DS, "CartToCheckout")
+        dgvLemparData.DataSource = DS.Tables(0)
+    End Sub
+    Sub checkOut()
+        Dim tanggal As String = DateTime.Now.ToString("dd/MMMM/yyyy", New System.Globalization.CultureInfo("id-ID"))
+        cart2Checkout()
+        Call koneksi()
+        CMD = New MySqlCommand("insert into tbtransaksi (id, id_user, tanggal, status) values('" & Pelanggan_Main.idCart & "', '" & Pelanggan_Main.Id & "', '" & tanggal & "', 'SEDANG DIPROSES')", CONN)
+        CMD.ExecuteNonQuery()
+        For Each row As DataGridViewRow In dgvLemparData.Rows
+            Dim itemBarang As String = row.Cells(0).Value
+            Dim qtyBarang As Integer = row.Cells(1).Value
+            Dim hargaBarang As Integer = row.Cells(2).Value
+            Dim fotoBarang As String = row.Cells(3).Value
+            CMD = New MySqlCommand("insert into tbtransaksi_item(idtransaksi, item, qty, harga, foto) values('" & Pelanggan_Main.idCart & "', '" & itemBarang & "', '" & qtyBarang & "', '" & hargaBarang & "', '" & fotoBarang & "')", CONN)
+            CMD.ExecuteNonQuery()
+        Next
+        CMD = New MySqlCommand("delete from tbkeranjang_item where idkeranjang='" & Pelanggan_Main.idCart & "';delete from tbkeranjang where id = '" & Pelanggan_Main.idCart & "'", CONN)
+        CMD.ExecuteNonQuery()
+    End Sub
+
     Private Sub btnUp_Click(sender As Object, e As EventArgs) Handles btnUp.Click
         dataAwal = dataAwal - batasDataHalaman
         langkah = langkah - 1
@@ -270,7 +294,7 @@ Public Class Pelanggan_Keranjang
     End Sub
 
     Private Sub btnMin5_Click(sender As Object, e As EventArgs) Handles btnMin5.Click
-        If lbQty1.Text = 1 Then
+        If lbQty5.Text = 1 Then
             Dim cancel As String
             cancel = MessageBox.Show("Apakah Anda Yakin Ingin Menghapus?", "Perhatian!", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
             If cancel = MsgBoxResult.Yes Then
@@ -299,5 +323,13 @@ Public Class Pelanggan_Keranjang
 
     Private Sub btnRm5_Click(sender As Object, e As EventArgs) Handles btnRm5.Click
         cancelItem(dgvKeranjang.Rows(4).Cells(0).Value.ToString)
+    End Sub
+
+    Private Sub btnCheckOut_Click(sender As Object, e As EventArgs) Handles btnCheckOut.Click
+        If lbTotal.Text > 0 Then
+            checkOut()
+            Pelanggan_Main.AdaCart()
+            Pelanggan_Main.btnTransaksi.PerformClick()
+        End If
     End Sub
 End Class

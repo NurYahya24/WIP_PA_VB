@@ -95,6 +95,8 @@ Public Class Pelanggan_Barang
     End Sub
 
     Sub cek()
+        btnNext.Enabled = True
+        btnPrev.Enabled = True
         Dim dataAkhir As Integer = getRowCount()
         If dataAwal = 0 Then
             If batasDataHalaman > getRowCount() Or batasDataHalaman = getRowCount() Then
@@ -106,6 +108,8 @@ Public Class Pelanggan_Barang
         ElseIf dataAwal > dataAkhir Then
             btnNext.Enabled = False
         ElseIf dataAwal > dgvDataBarang.RowCount Then
+            btnNext.Enabled = False
+        ElseIf (dataAwal + batasDataHalaman) = getRowCount() Then
             btnNext.Enabled = False
         Else
             btnPrev.Enabled = True

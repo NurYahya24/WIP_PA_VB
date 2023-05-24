@@ -94,6 +94,8 @@ Public Class Karyawan_barang
     End Sub
 
     Sub cek()
+        btnNext.Enabled = True
+        btnPrev.Enabled = True
         Dim dataAkhir As Integer = getRowCount()
         If dataAwal = 0 Then
             If batasDataHalaman > getRowCount() Or batasDataHalaman = getRowCount() Then
@@ -106,16 +108,15 @@ Public Class Karyawan_barang
             btnNext.Enabled = False
         ElseIf dataAwal > dgvDataBarang.RowCount Then
             btnNext.Enabled = False
+        ElseIf (dataAwal + batasDataHalaman) = getRowCount() Then
+            btnNext.Enabled = False
         Else
             btnPrev.Enabled = True
             btnNext.Enabled = True
         End If
     End Sub
 
-    Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
-        dataAwal = dataAwal + batasDataHalaman
-        readDB()
-    End Sub
+
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
         Karyawan_InputBarang.editKah = True
@@ -259,7 +260,7 @@ Public Class Karyawan_barang
             .Show()
         End With
         Karyawan_InputBarang.btnHapus.Visible = True
-        Karyawan_InputBarang.idBarang = idBarang3.Text
+        Karyawan_InputBarang.idBarang = idBarang4.Text
         Karyawan_InputBarang.txtNama.Text = dgvDataBarang.Rows(3).Cells(1).Value.ToString
         Karyawan_InputBarang.txtHarga.Text = dgvDataBarang.Rows(3).Cells(5).Value.ToString
         Karyawan_InputBarang.txtStok.Text = dgvDataBarang.Rows(3).Cells(4).Value.ToString
@@ -295,7 +296,9 @@ Public Class Karyawan_barang
         readDB()
     End Sub
 
-    Private Sub OpenFileDialog1_FileOk(sender As Object, e As System.ComponentModel.CancelEventArgs)
-
+    Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
+        dataAwal = dataAwal + batasDataHalaman
+        readDB()
     End Sub
+
 End Class

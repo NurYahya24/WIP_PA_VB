@@ -40,7 +40,7 @@ Partial Class Splash_screen
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label1.Location = New System.Drawing.Point(331, 175)
+        Me.Label1.Location = New System.Drawing.Point(303, 184)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(96, 17)
         Me.Label1.TabIndex = 1
@@ -57,7 +57,7 @@ Partial Class Splash_screen
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.AliceBlue
-        Me.Panel1.Location = New System.Drawing.Point(323, 97)
+        Me.Panel1.Location = New System.Drawing.Point(295, 106)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1, 123)
         Me.Panel1.TabIndex = 3
@@ -67,7 +67,7 @@ Partial Class Splash_screen
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label2.Location = New System.Drawing.Point(330, 133)
+        Me.Label2.Location = New System.Drawing.Point(302, 142)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(134, 21)
         Me.Label2.TabIndex = 4
@@ -78,7 +78,7 @@ Partial Class Splash_screen
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label3.Location = New System.Drawing.Point(330, 154)
+        Me.Label3.Location = New System.Drawing.Point(302, 163)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(165, 21)
         Me.Label3.TabIndex = 5
@@ -104,7 +104,7 @@ Partial Class Splash_screen
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Location = New System.Drawing.Point(68, 90)
+        Me.PictureBox1.Location = New System.Drawing.Point(85, 109)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(249, 122)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage

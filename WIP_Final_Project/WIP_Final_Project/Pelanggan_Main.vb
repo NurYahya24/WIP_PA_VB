@@ -55,6 +55,13 @@ Public Class Pelanggan_Main
         btnTransaksi.BackColor = Color.Gray
         btnProfil.BackColor = Color.Transparent
         Button1.Visible = True
+        With Pelanggan_Transaksi
+            .TopLevel = False
+            pnCanvas.Controls.Add(Pelanggan_Transaksi)
+            .BringToFront()
+            .Show()
+        End With
+        Pelanggan_Transaksi.bntProses.PerformClick()
     End Sub
 
     Private Sub btnProfil_Click(sender As Object, e As EventArgs) Handles btnProfil.Click

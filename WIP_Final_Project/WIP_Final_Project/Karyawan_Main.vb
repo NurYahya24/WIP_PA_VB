@@ -37,6 +37,13 @@ Public Class Karyawan_Main
         btnBarang.BackColor = Color.Transparent
         btnTransaksi.BackColor = Color.Gray
         btnProfil.BackColor = Color.Transparent
+        With Karyawan_transaksi
+            .TopLevel = False
+            pnCanvas.Controls.Add(Karyawan_transaksi)
+            .BringToFront()
+            .Show()
+        End With
+        Karyawan_transaksi.bntProses.PerformClick()
 
     End Sub
 

@@ -42,24 +42,24 @@ Public Class Karyawan_InputBarang
         kondisi = True
         Call koneksi()
         cekForm()
-        Dim des As String = alamat + txtNama.Text + ".jpg"
-        If pbBarang.Image IsNot Nothing Then
-            If (My.Computer.FileSystem.FileExists(des)) Then
-                If Not (des = pbBarang.ImageLocation) Then
-                    My.Computer.FileSystem.DeleteFile(des)
-                    My.Computer.FileSystem.CopyFile(pbBarang.ImageLocation, des)
-                End If
-
-            Else
-                My.Computer.FileSystem.CopyFile(pbBarang.ImageLocation, des)
-            End If
-        End If
         Dim query As String = ""
         If kondisi Then
+            Dim des As String = alamat + txtNama.Text + ".jpg"
+            If pbBarang.Image IsNot Nothing Then
+                If (My.Computer.FileSystem.FileExists(des)) Then
+                    If Not (des = pbBarang.ImageLocation) Then
+                        My.Computer.FileSystem.DeleteFile(des)
+                        My.Computer.FileSystem.CopyFile(pbBarang.ImageLocation, des)
+                    End If
+
+                Else
+                    My.Computer.FileSystem.CopyFile(pbBarang.ImageLocation, des)
+                End If
+            End If
             If editKah Then
                 query = "update tbbarang set nama='" & txtNama.Text & "', tipe='" & cbTipe.SelectedItem.ToString & "', jenis='" & cbJenis.SelectedItem.ToString & "', stok='" & txtStok.Text & "', harga='" & txtHarga.Text & "', desk='" & txtDesk.Text & "', foto='" & txtNama.Text + ".jpg" & "' where id='" & idBarang & "'"
-            ElseIf Not editKah Then
-                query = "insert into tbbarang(id, nama, tipe, jenis, stok, harga, desk, foto) values('0', '" & txtNama.Text & "', '" & cbTipe.SelectedItem.ToString & "', '" & cbJenis.SelectedItem.ToString & "', '" & txtStok.Text & "', '" & txtHarga.Text & "', '" & txtDesk.Text & "', '" & txtNama.Text + ".jpg" & "')"
+            Else
+                query = "insert into tbbarang(id, nama, tipe, jenis, stok, harga, desk, foto) values(0, '" & txtNama.Text & "', '" & cbTipe.SelectedItem.ToString & "', '" & cbJenis.SelectedItem.ToString & "', '" & txtStok.Text & "', '" & txtHarga.Text & "', '" & txtDesk.Text & "', '" & txtNama.Text + ".jpg" & "')"
             End If
             CMD = New MySqlCommand(query, CONN)
             CMD.ExecuteNonQuery()

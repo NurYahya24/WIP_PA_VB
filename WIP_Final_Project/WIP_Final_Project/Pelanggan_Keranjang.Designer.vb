@@ -97,6 +97,7 @@ Partial Class Pelanggan_Keranjang
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.dgvKeranjang = New System.Windows.Forms.DataGridView()
         Me.lbKosong = New System.Windows.Forms.Label()
+        Me.dgvLemparData = New System.Windows.Forms.DataGridView()
         Me.Item1.SuspendLayout()
         Me.Panel6.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -120,6 +121,7 @@ Partial Class Pelanggan_Keranjang
         Me.Panel26.SuspendLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvKeranjang, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvLemparData, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Item1
@@ -921,9 +923,9 @@ Partial Class Pelanggan_Keranjang
         '
         Me.dgvKeranjang.AllowUserToAddRows = False
         Me.dgvKeranjang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvKeranjang.Location = New System.Drawing.Point(365, 0)
+        Me.dgvKeranjang.Location = New System.Drawing.Point(374, 0)
         Me.dgvKeranjang.Name = "dgvKeranjang"
-        Me.dgvKeranjang.Size = New System.Drawing.Size(70, 58)
+        Me.dgvKeranjang.Size = New System.Drawing.Size(61, 58)
         Me.dgvKeranjang.TabIndex = 14
         Me.dgvKeranjang.Visible = False
         '
@@ -938,12 +940,23 @@ Partial Class Pelanggan_Keranjang
         Me.lbKosong.Text = "-----Keranjang Kosong-----"
         Me.lbKosong.Visible = False
         '
+        'dgvLemparData
+        '
+        Me.dgvLemparData.AllowUserToAddRows = False
+        Me.dgvLemparData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvLemparData.Location = New System.Drawing.Point(112, 0)
+        Me.dgvLemparData.Name = "dgvLemparData"
+        Me.dgvLemparData.Size = New System.Drawing.Size(67, 58)
+        Me.dgvLemparData.TabIndex = 16
+        Me.dgvLemparData.Visible = False
+        '
         'Pelanggan_Keranjang
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(584, 525)
+        Me.Controls.Add(Me.dgvLemparData)
         Me.Controls.Add(Me.lbKosong)
         Me.Controls.Add(Me.dgvKeranjang)
         Me.Controls.Add(Me.Item5)
@@ -985,6 +998,7 @@ Partial Class Pelanggan_Keranjang
         Me.Panel26.ResumeLayout(False)
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvKeranjang, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvLemparData, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1064,4 +1078,5 @@ Partial Class Pelanggan_Keranjang
     Friend WithEvents PictureBox5 As PictureBox
     Friend WithEvents dgvKeranjang As DataGridView
     Friend WithEvents lbKosong As Label
+    Friend WithEvents dgvLemparData As DataGridView
 End Class
