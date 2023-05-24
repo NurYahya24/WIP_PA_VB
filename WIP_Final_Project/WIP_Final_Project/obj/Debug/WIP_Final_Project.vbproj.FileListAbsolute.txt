@@ -180,3 +180,11 @@ C:\Users\ahmad\Downloads\WIP_PA_VB-main (2)\WIP_PA_VB-main\WIP_Final_Project\WIP
 C:\Users\ahmad\Downloads\WIP_PA_VB-main (2)\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.pdb
 C:\Users\ahmad\Downloads\WIP_PA_VB-main (2)\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.Owner_Karyawan.resources
 C:\Users\ahmad\Downloads\WIP_PA_VB-main (2)\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.Owner_Barang.resources
+D:\Code\VisualBasic\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.Owner_Barang.resources
+D:\Code\VisualBasic\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.Owner_Karyawan.resources
+D:\Code\VisualBasic\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.Owner_Main.resources
+D:\Code\VisualBasic\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.Karyawan_transaksi.resources
+D:\Code\VisualBasic\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.Karyawan_DetailTransaksi.resources
+D:\Code\VisualBasic\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.Owner_Transaksi.resources
+D:\Code\VisualBasic\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.Pelanggan_Transaksi.resources
+D:\Code\VisualBasic\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.Pelanggan_DetailTransaksi.resources
