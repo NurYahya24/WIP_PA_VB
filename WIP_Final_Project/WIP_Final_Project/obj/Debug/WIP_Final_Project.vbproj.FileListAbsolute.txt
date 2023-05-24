@@ -188,3 +188,4 @@ D:\Code\VisualBasic\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug
 D:\Code\VisualBasic\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.Owner_Transaksi.resources
 D:\Code\VisualBasic\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.Pelanggan_Transaksi.resources
 D:\Code\VisualBasic\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.Pelanggan_DetailTransaksi.resources
+D:\Code\VisualBasic\WIP_PA_VB-main\WIP_Final_Project\WIP_Final_Project\obj\Debug\WIP_Final_Project.GantiPassword.resources
